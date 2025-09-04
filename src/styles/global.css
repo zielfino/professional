@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+h1 {
+    @apply text-[32px] font-bold tracking-wide;
+}
+
+h2 {
+    @apply text-[24px];
+}
+
+h3 {
+    @apply text-[21px] font-semibold;
+}
+
+p {
+    @apply text-[14px];
+}

@@ -1,3 +1,19 @@
 ---
 import "../styles/global.css";
 ---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Ziel Alfino</title>
+	</head>
+	<body>
+        <section class="w-full flex justify-center">
+            <div class="w-full max-w-[710px] bg-red-50">
+                <slot />
+            </div>
+        </section>
+	</body>
+</html>
