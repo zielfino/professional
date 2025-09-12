@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat+Brush&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
     --color-mainred: #ff7261;
     --color-mainlight: #f8f9fa;
@@ -27,9 +28,9 @@ img, input, button {
     pointer-events: auto;
 }
 
-/* * {
-    @apply select-none
-} */
+* {
+    @apply transition-colors
+}
 
 h1 {
     @apply text-[32px] font-bold tracking-wide mb-2 font-manrope
@@ -41,7 +42,7 @@ h2 {
 
 
 .title {
-    @apply text-zinc-800 py-8
+    @apply text-zinc-800 dark:text-white py-8
 }
 
 .title b {
@@ -49,11 +50,11 @@ h2 {
 }
 
 .title a {
-    @apply text-[14px] text-zinc-800 hover:underline visited:text-sky-600 outline-none focus:underline focus:decoration-[1.5px] focus-visible:decoration-sky-400
+    @apply text-[14px] text-zinc-800 dark:text-white hover:underline visited:text-sky-600 dark:visited:text-sky-400 outline-none focus:underline focus:decoration-[1.5px] focus-visible:decoration-sky-400
 }
 
 .title span {
-    @apply text-[14px] text-zinc-800
+    @apply text-[14px] text-zinc-800 dark:text-white
 }
 
 .title .paragraph {
@@ -65,11 +66,11 @@ h2 {
 }
 
 .title h4 {
-    @apply text-[14px] font-semibold text-zinc-800 tracking-wide;
+    @apply text-[14px] font-semibold text-zinc-800 dark:text-white tracking-wide;
 }
 
 .title h5 {
-    @apply text-[14px] text-zinc-400;
+    @apply text-[14px] text-zinc-400 dark:text-zinc-500;
 }
 
 .title ul {
@@ -77,17 +78,17 @@ h2 {
 }
 
 .title p , .title li {
-    @apply text-[14px] text-zinc-600
+    @apply text-[14px] text-zinc-600 dark:text-zinc-300
 }
 
 .title li {
-    @apply text-[14px] text-zinc-600 text-justify mt-1
+    @apply text-[14px] text-zinc-600 dark:text-zinc-300 text-justify mt-1
 }
 
 .title > div > p {
-    @apply mt-2.5 mb-6 text-zinc-600 text-justify
+    @apply mt-2.5 mb-6 text-zinc-600 dark:text-zinc-300 text-justify
 }
 
 .title > div > ul > p {
-    @apply mt-2.5 mb-5 text-zinc-600
+    @apply mt-2.5 mb-5 text-zinc-600 dark:text-zinc-300
 }

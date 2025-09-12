@@ -13,9 +13,9 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</div>
 
-	<div class="border-b-1 border-zinc-300 w-full"></div>
+	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
-	<section class="title">
+	<section class="title" id="contact">
 		<h3>Contact</h3>
 		<div class="flex justify-between w-full">
 			<a href="https://wa.me/6281991879493" target="_blank">+62 8 1991 87 9493</a>
@@ -25,11 +25,13 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</section>
 
-	<div class="border-b-1 border-zinc-300 w-full"></div>
+	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
-	<section class="title">
+	<section class="title" id="profile">
 		<h3>Profile</h3>
-		<p class="paragraph">
+		<p class="paragraph"
+			data-en="I am a design-focused front-end developer who transforms concepts directly into functional, visually refined web interfaces by designing in code. I emphasize layout, motion, interactivity, and UI logic—including theming and state management—and apply systems thinking, ergonomics, and user-flow design to streamline idea-to-implementation with minimal handoffs—or none at all. I am seeking a role in which I can lead the end-to-end delivery of polished, testable, and user-centric web products."
+			data-id="Sebagai front-end developer yang mendesain dengan kode, saya ahli dalam mengubah ide menjadi antarmuka web yang fungsional, indah, dan efisien. Saya fokus pada detail visual, interaktivitas, dan logika UI, serta menguasai desain alur pengguna untuk mempercepat proses pengembangan. Saya mencari posisi yang memungkinkan saya dadpat membantu pada pengembangan produk digital dari awal hingga akhir, memastikan hasilnya berkualitas tinggi dan berpusat pada kebutuhan pengguna.">
 			I am a design-focused front-end developer who transforms concepts directly into functional, visually refined web interfaces by designing in code. I emphasize layout, motion, interactivity, and UI logic—including theming and state management—and apply systems thinking, ergonomics, and user-flow design to streamline idea-to-implementation with minimal handoffs—or none at all. I am seeking a role in which I can lead the end-to-end delivery of polished, testable, and user-centric web products.
 		</p>
 		<!-- <p class="paragraph indent-6">
@@ -37,9 +39,9 @@ import Layout from "../layouts/Layout.astro";
 		</p> -->
 	</section>
 
-	<div class="border-b-1 border-zinc-300 w-full"></div>
+	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
-	<section class="title space-y-0">
+	<section class="title space-y-0" id="technical">
 		<div class="flex items-baseline space-x-2">
 			<h3>Technicals</h3>
 			<h5>(sort by Relevant)</h5>
@@ -47,15 +49,15 @@ import Layout from "../layouts/Layout.astro";
 		<div class="flex justify-between items-center w-full whitespace-nowrap flex-wrap">
 			<Technical icon="vscode-icons:file-type-tailwind" name="TailwindCSS" />
 			•
-			<Technical icon="vscode-icons:file-type-light-astro" name="AstroJS" />
+			<Technical icon="vscode-icons:file-type-nuxt" name="NuxtJS" />
+			•
+			<Technical icon="vscode-icons:file-type-svelte" name="SvelteKit" />
 			•
 			<Technical icon="vscode-icons:file-type-vue" name="VueJS" />
 			•
-			<Technical icon="vscode-icons:file-type-nuxt" name="NuxtJS" />
-			•
 			<Technical icon="vscode-icons:file-type-svelte" name="Svelte" />
 			•
-			<Technical icon="vscode-icons:file-type-svelte" name="SvelteKit" />
+			<Technical icon="vscode-icons:file-type-light-astro" name="AstroJS" />
 			•
 			<Technical icon="vscode-icons:file-type-reactjs" name="ReactJS" />
 			•
@@ -71,7 +73,7 @@ import Layout from "../layouts/Layout.astro";
 			•
 			<Technical icon="devicon:mysql" name="MySQL" />
 			•
-			<Technical icon="skill-icons:github-light" name="GitHub" />
+			<Technical icon="simple-icons:github" name="GitHub" />
 			•
 			<Technical icon="devicon:cloudflare" name="Cloudflare" />
 			•
@@ -144,23 +146,46 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</section>
 
-	<div class="border-b-1 border-zinc-300 w-full"></div>
+	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
-	<section class="title">
+	<section class="title" id="experience">
 		<h3>Experience</h3>
 		<div>
 			<!-- <img src="/agerrstudio.svg" alt="agerrstudio Logo" class="h-6 mb-2 mt-4" /> -->
 			<div class="w-fit">
 				<a href="https://agerrstudio.com" tabindex="-1">
-					<div class="flex items-center mt-4 mb-0.5">
-						<svg class="h-6 mr-4 -translate-y-[25%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080"><path d="M1080,939.48v129.21a11.31,11.31,0,0,1-11.31,11.31H759.8a11.31,11.31,0,0,1-10.73-14.9l68.17-203.54a134.36,134.36,0,0,0-11-109.71L551.19,309a12.91,12.91,0,0,0-22.38,0L273.72,751.85a134.36,134.36,0,0,0-11,109.71l68.17,203.54A11.31,11.31,0,0,1,320.2,1080H11.31A11.31,11.31,0,0,1,0,1068.69V939.48A712.42,712.42,0,0,1,88.64,595.3L401.54,28.06A54.26,54.26,0,0,1,449.07,0H630.93a54.26,54.26,0,0,1,47.53,28.06L991.36,595.3A712.42,712.42,0,0,1,1080,939.48Z" fill="#27272a"></path><circle cx="540.75" cy="816.34" r="118.61" fill="#27272a"></circle></svg>
-						<svg viewBox="0 0 142.85 27.57" class="h-6"><g><path fill="#27272a" d="m122.74.41v6.72h-3.76c-.86-1.85-2.2-2.77-4.02-2.77-1.16,0-2.09.38-2.78,1.15-.69.77-1.04,1.8-1.04,3.09,0,1.56.36,2.72,1.09,3.46s1.63,1.12,2.69,1.12c.84,0,1.64-.24,2.39-.73.75-.48,1.36-1.13,1.81-1.92l4.11,1.8c-1.53,3.33-4.21,5-8.04,5-2.88,0-5.18-.79-6.9-2.36-1.72-1.57-2.57-3.68-2.57-6.31s.84-4.71,2.52-6.23c1.68-1.52,3.64-2.28,5.87-2.28,1.79,0,3.46.54,5.01,1.62V.41h3.61Z"></path><path fill="#27272a" d="m134.15,17.34c-2.44,0-4.5-.77-6.18-2.32-1.68-1.54-2.52-3.66-2.52-6.35s.84-4.81,2.52-6.35c1.68-1.55,3.74-2.32,6.18-2.32s4.52.77,6.19,2.32c1.68,1.54,2.51,3.66,2.51,6.35s-.83,4.77-2.49,6.33c-1.66,1.56-3.73,2.34-6.22,2.34Zm-.02-4.1c.98,0,1.78-.38,2.39-1.13.61-.75.92-1.93.92-3.54,0-1.41-.3-2.52-.89-3.31-.59-.79-1.4-1.19-2.41-1.19-2.18,0-3.27,1.57-3.27,4.72,0,1.29.27,2.35.81,3.19s1.36,1.26,2.45,1.26Z"></path><path fill="#27272a" d="m34.02,16.62c-2.68,1.11-5.29,1.26-7.87.06-1.68-.78-3-1.96-3.91-3.59-1.84-3.28-1.42-7.22,1.1-10.04C26.1-.05,29.6-.56,34.49,1.44c.76-.87,2.47-1.35,3.54-.87.34.16.72.71.72,1.08.03,6.04.21,12.09-.06,18.12-.25,5.61-6.17,9.19-11.58,7.29-1.16-.41-2.23-1.06-3.32-1.65-.83-.45-1.02-1.06-.34-1.84.53-.6,1.04-1.22,1.49-1.88.48-.7.87-.57,1.56-.22,1.15.59,2.41,1.27,3.63,1.3,2.94.07,4.55-2.54,3.88-6.14Zm-4.11-11.91c-2.44.02-4.16,1.73-4.16,4.14,0,2.42,1.83,4.21,4.27,4.19,2.37-.02,4.16-1.81,4.17-4.17.01-2.43-1.78-4.17-4.28-4.15Z"></path><path fill="#27272a" d="m13.37,1.48c.74-.91,2.82-1.45,3.7-.9.31.19.58.7.58,1.07.04,4.72.03,9.44.03,14.15,0,.83-.39,1.31-1.24,1.24-.99-.08-2.08.38-2.96-.53-.14-.15-.72.04-1.06.18C7.09,18.86,1.29,15.93.19,10.46-.49,7.04.66,4.19,3.33,2.06,6.01-.07,9.03-.54,12.23.91c.36.16.71.35,1.15.57Zm-4.53,3.23c-2.45,0-4.18,1.7-4.2,4.1-.02,2.43,1.79,4.23,4.23,4.22,2.43,0,4.24-1.85,4.2-4.26-.04-2.4-1.78-4.07-4.24-4.07Z"></path><path fill="#27272a" d="m48.1,11.77c1.41,1.27,3.24,1.47,4.67.46,1-.7,1.66-.55,2.29.38.07.1.16.18.23.27,1.68,1.95,1.68,2.15-.65,3.42-3.02,1.65-6.05,1.39-8.85-.48-2.9-1.94-4.23-4.78-3.77-8.25.46-3.53,2.52-5.89,5.86-7.08,5.51-1.96,9.45,2.16,10.59,6.53.21.79-.31.96-.85,1.16-2.74,1.01-5.47,2.02-8.21,3.03-.4.15-.79.33-1.33.55Zm4.38-6.44c-1.28-1-2.36-.84-3.4-.45-1.05.39-1.85,1.08-2.3,2.56,2.04-.75,3.74-1.38,5.7-2.11Z"></path><path fill="#27272a" d="m66.85,2.68c1.36-.79,2.63-1.68,4.03-2.29,1.48-.64,2-.17,1.92,1.42-.01.28-.08.56-.07.83.09,1.4-.35,2.06-1.96,2.19-2.33.19-3.68,2.01-3.7,4.4-.02,2.16-.03,4.31,0,6.47.02,1.02-.4,1.45-1.42,1.45-3.42-.02-3.23.28-3.22-3.13.01-3.95,0-7.91,0-11.86,0-1.45.23-1.67,1.66-1.68.32,0,.64.02.96,0,1.03-.08,1.59.34,1.62,1.41,0,.3.12.6.16.8Z"></path><path fill="#27272a" d="m80.56,2.7c1.32-.78,2.55-1.67,3.9-2.27,1.59-.71,2.13-.24,2.04,1.49,0,.16-.02.32-.03.48q-.17,1.98-2.1,2.39c-2.25.48-3.57,2.09-3.59,4.43-.02,2.16-.03,4.31,0,6.47.02,1.01-.37,1.47-1.4,1.47-3.45-.02-3.22.29-3.21-3.12,0-3.87,0-7.75,0-11.62,0-1.8.13-1.93,1.88-1.94.24,0,.48.02.72,0,1.03-.09,1.6.33,1.63,1.41,0,.31.11.61.15.82Z"></path><path fill="#27272a" d="m92.81,14.36c-.02-1.57,1.14-2.78,2.67-2.78,1.45,0,2.68,1.18,2.73,2.65.06,1.48-1.22,2.78-2.71,2.78-1.5,0-2.67-1.15-2.69-2.64Z"></path></g></svg>
+					<div class="flex items-center mt-4 mb-0.5 text-zinc-800 dark:text-zinc-100">
+						<svg class="h-6 mr-4 -translate-y-[25%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080"><path d="M1080,939.48v129.21a11.31,11.31,0,0,1-11.31,11.31H759.8a11.31,11.31,0,0,1-10.73-14.9l68.17-203.54a134.36,134.36,0,0,0-11-109.71L551.19,309a12.91,12.91,0,0,0-22.38,0L273.72,751.85a134.36,134.36,0,0,0-11,109.71l68.17,203.54A11.31,11.31,0,0,1,320.2,1080H11.31A11.31,11.31,0,0,1,0,1068.69V939.48A712.42,712.42,0,0,1,88.64,595.3L401.54,28.06A54.26,54.26,0,0,1,449.07,0H630.93a54.26,54.26,0,0,1,47.53,28.06L991.36,595.3A712.42,712.42,0,0,1,1080,939.48Z" fill="currentColor"></path><circle cx="540.75" cy="816.34" r="118.61" fill="currentColor"></circle></svg>
+						<svg viewBox="0 0 142.85 27.57" class="h-6"><g><path fill="currentColor" d="m122.74.41v6.72h-3.76c-.86-1.85-2.2-2.77-4.02-2.77-1.16,0-2.09.38-2.78,1.15-.69.77-1.04,1.8-1.04,3.09,0,1.56.36,2.72,1.09,3.46s1.63,1.12,2.69,1.12c.84,0,1.64-.24,2.39-.73.75-.48,1.36-1.13,1.81-1.92l4.11,1.8c-1.53,3.33-4.21,5-8.04,5-2.88,0-5.18-.79-6.9-2.36-1.72-1.57-2.57-3.68-2.57-6.31s.84-4.71,2.52-6.23c1.68-1.52,3.64-2.28,5.87-2.28,1.79,0,3.46.54,5.01,1.62V.41h3.61Z"></path><path fill="currentColor" d="m134.15,17.34c-2.44,0-4.5-.77-6.18-2.32-1.68-1.54-2.52-3.66-2.52-6.35s.84-4.81,2.52-6.35c1.68-1.55,3.74-2.32,6.18-2.32s4.52.77,6.19,2.32c1.68,1.54,2.51,3.66,2.51,6.35s-.83,4.77-2.49,6.33c-1.66,1.56-3.73,2.34-6.22,2.34Zm-.02-4.1c.98,0,1.78-.38,2.39-1.13.61-.75.92-1.93.92-3.54,0-1.41-.3-2.52-.89-3.31-.59-.79-1.4-1.19-2.41-1.19-2.18,0-3.27,1.57-3.27,4.72,0,1.29.27,2.35.81,3.19s1.36,1.26,2.45,1.26Z"></path><path fill="currentColor" d="m34.02,16.62c-2.68,1.11-5.29,1.26-7.87.06-1.68-.78-3-1.96-3.91-3.59-1.84-3.28-1.42-7.22,1.1-10.04C26.1-.05,29.6-.56,34.49,1.44c.76-.87,2.47-1.35,3.54-.87.34.16.72.71.72,1.08.03,6.04.21,12.09-.06,18.12-.25,5.61-6.17,9.19-11.58,7.29-1.16-.41-2.23-1.06-3.32-1.65-.83-.45-1.02-1.06-.34-1.84.53-.6,1.04-1.22,1.49-1.88.48-.7.87-.57,1.56-.22,1.15.59,2.41,1.27,3.63,1.3,2.94.07,4.55-2.54,3.88-6.14Zm-4.11-11.91c-2.44.02-4.16,1.73-4.16,4.14,0,2.42,1.83,4.21,4.27,4.19,2.37-.02,4.16-1.81,4.17-4.17.01-2.43-1.78-4.17-4.28-4.15Z"></path><path fill="currentColor" d="m13.37,1.48c.74-.91,2.82-1.45,3.7-.9.31.19.58.7.58,1.07.04,4.72.03,9.44.03,14.15,0,.83-.39,1.31-1.24,1.24-.99-.08-2.08.38-2.96-.53-.14-.15-.72.04-1.06.18C7.09,18.86,1.29,15.93.19,10.46-.49,7.04.66,4.19,3.33,2.06,6.01-.07,9.03-.54,12.23.91c.36.16.71.35,1.15.57Zm-4.53,3.23c-2.45,0-4.18,1.7-4.2,4.1-.02,2.43,1.79,4.23,4.23,4.22,2.43,0,4.24-1.85,4.2-4.26-.04-2.4-1.78-4.07-4.24-4.07Z"></path><path fill="currentColor" d="m48.1,11.77c1.41,1.27,3.24,1.47,4.67.46,1-.7,1.66-.55,2.29.38.07.1.16.18.23.27,1.68,1.95,1.68,2.15-.65,3.42-3.02,1.65-6.05,1.39-8.85-.48-2.9-1.94-4.23-4.78-3.77-8.25.46-3.53,2.52-5.89,5.86-7.08,5.51-1.96,9.45,2.16,10.59,6.53.21.79-.31.96-.85,1.16-2.74,1.01-5.47,2.02-8.21,3.03-.4.15-.79.33-1.33.55Zm4.38-6.44c-1.28-1-2.36-.84-3.4-.45-1.05.39-1.85,1.08-2.3,2.56,2.04-.75,3.74-1.38,5.7-2.11Z"></path><path fill="currentColor" d="m66.85,2.68c1.36-.79,2.63-1.68,4.03-2.29,1.48-.64,2-.17,1.92,1.42-.01.28-.08.56-.07.83.09,1.4-.35,2.06-1.96,2.19-2.33.19-3.68,2.01-3.7,4.4-.02,2.16-.03,4.31,0,6.47.02,1.02-.4,1.45-1.42,1.45-3.42-.02-3.23.28-3.22-3.13.01-3.95,0-7.91,0-11.86,0-1.45.23-1.67,1.66-1.68.32,0,.64.02.96,0,1.03-.08,1.59.34,1.62,1.41,0,.3.12.6.16.8Z"></path><path fill="currentColor" d="m80.56,2.7c1.32-.78,2.55-1.67,3.9-2.27,1.59-.71,2.13-.24,2.04,1.49,0,.16-.02.32-.03.48q-.17,1.98-2.1,2.39c-2.25.48-3.57,2.09-3.59,4.43-.02,2.16-.03,4.31,0,6.47.02,1.01-.37,1.47-1.4,1.47-3.45-.02-3.22.29-3.21-3.12,0-3.87,0-7.75,0-11.62,0-1.8.13-1.93,1.88-1.94.24,0,.48.02.72,0,1.03-.09,1.6.33,1.63,1.41,0,.31.11.61.15.82Z"></path><path fill="currentColor" d="m92.81,14.36c-.02-1.57,1.14-2.78,2.67-2.78,1.45,0,2.68,1.18,2.73,2.65.06,1.48-1.22,2.78-2.71,2.78-1.5,0-2.67-1.15-2.69-2.64Z"></path></g></svg>
 					</div>
 				</a>
 			</div>
 			<h4 class="flex justify-between w-full"><span>Founder & Principal Designer — <a href="https://agerrstudio.com" target="_blank">agerr.studio</a></span> <i>2018 – Present</i></h4>
 			<h5>(on-demand / project-based)</h5>
-			<ul>
+			<ul data-en="
+				<li><b>Founded</b> and <b>lead</b> agerr.studio, a visual branding studio focused on <b>logo design</b>, <b>packaging</b>, <b>merchandise</b>, <b>banners</b>, and <b>website development</b> for SMEs, organizations, and corporate clients.</li>
+				<li>Design brand identities and marketing collateral using <b>Adobe Illustrator</b> and <b>Photoshop</b>, producing print-ready files, brand guidelines, and digital assets that reflect client vision.</li>
+				<li>Developed and <b>maintain 7+</b> live websites hosted on <b>Hostinger</b>, providing <b>WordPress</b> template and <b>custom static</b> builds, plus contract maintenance and client support.</li>
+				<li>Served <b>35+ clients</b> across industries (SMEs, travel, manufacturing, promo campaigns); notable engagements include promotional design for <b>Panasonic Gobel</b>, website build for <b>Umroh Marco Travel</b>, and web presence for <b>MJBTechnic</b> (AC & genset rental).</li>
+				<li>Manage end-to-end studio operations as sole proprietor: client scoping, pricing, contracting, invoicing, project delivery, and post-launch support — projects are infrequent and scheduled to respect client timelines.</li>
+				<li>Ensure detail-oriented execution and timely delivery by enforcing design review passes, producing clear handoff documentation, and maintaining transparent client communication</li>
+				<li>Spearheading <b>KASATARA</b> — <i>agerr.studio’s</i> annual flagship project for 2025, a digital reading platform.</li>
+				<ul>
+					<li><b>Concept & role:</b> Lead brand concept, visual identity, UX/UI design, system implementation including backend and database. Position <i>KASATARA</i> as a regional reading platform for Nusantara creators, enabling direct upload and publication of digital works.</li>
+					<li><b>Scope & features:</b> Initial focus on <i>light novels</i> and <i>comics</i>, with planned expansion to <i>animation</i>, and <i>film</i>. <i>KASATARA</i> — Ka/Sa/Ca (hearing/reading/seeing); Tara (Nusantara/variety).</li>
+				</ul>"
+				data-id="
+				<li><b>Mendirikan</b> dan <b>memimpin</b> agerr.studio, sebuah studio branding visual yang berfokus pada <b>desain logo</b>, <b>kemasan</b>, <b>merchandise</b>, <b>banner</b>, dan <b>pengembangan website</b> untuk UMKM, organisasi, dan klien korporat.</li>
+				<li>Mendesain identitas merek dan materi pemasaran menggunakan <b>Adobe Illustrator</b> dan <b>Photoshop</b>, menghasilkan file siap cetak, panduan merek, dan aset digital yang mencerminkan visi klien.</li>
+				<li>Mengembangkan dan <b>memelihara 7+</b> website yang aktif di <b>Hostinger</b>, menyediakan template <b>WordPress</b> dan pembuatan <b>custom static</b>, serta pemeliharaan kontrak dan dukungan klien.</li>
+				<li>Melayani <b>35+ klien</b> dari berbagai industri (UMKM, travel, manufaktur, kampanye promosi); proyek penting termasuk desain promosi untuk <b>Panasonic Gobel</b>, pembuatan website untuk <b>Umroh Marco Travel</b>, dan kehadiran web untuk <b>MJBTechnic</b> (penyewaan AC & genset).</li>
+				<li>Mengelola operasional studio secara menyeluruh sebagai pemilik tunggal: pencarian klien, penetapan harga, kontrak, penagihan, pengiriman proyek, dan dukungan pasca-peluncuran — proyek tidak sering dan dijadwalkan sesuai tenggat waktu klien.</li>
+				<li>Memastikan eksekusi yang detail dan pengiriman tepat waktu dengan memberlakukan revisi desain, menyiapkan dokumentasi serah terima yang jelas, dan menjaga komunikasi yang transparan dengan klien.</li>
+				<li>Memimpin <b>KASATARA</b> — proyek unggulan tahunan agerr.studio untuk tahun 2025, sebuah platform membaca digital.</li>
+				<ul>
+					<li><b>Konsep & peran:</b> Memimpin konsep merek, identitas visual, desain UX/UI, implementasi sistem termasuk backend dan database. Memposisikan <i>KASATARA</i> sebagai platform baca regional untuk kreator Nusantara, memungkinkan unggah dan publikasi karya digital secara langsung.</li>
+					<li><b>Cakupan & fitur:</b> Fokus awal pada <i>light novel</i> dan <i>komik</i>, dengan rencana ekspansi ke <i>animasi</i> dan <i>film</i>. <i>KASATARA</i> — Ka/Sa/Ca (mendengar/membaca/melihat); Tara (Nusantara/ragam).</li>
+				</ul>">
 				<li><b>Founded</b> and <b>lead</b> agerr.studio, a visual branding studio focused on <b>logo design</b>, <b>packaging</b>, <b>merchandise</b>, <b>banners</b>, and <b>website development</b> for SMEs, organizations, and corporate clients.</li>
 				<li>Design brand identities and marketing collateral using <b>Adobe Illustrator</b> and <b>Photoshop</b>, producing print-ready files, brand guidelines, and digital assets that reflect client vision.</li>
 				<li>Developed and <b>maintain 7+</b> live websites hosted on <b>Hostinger</b>, providing <b>WordPress</b> template and <b>custom static</b> builds, plus contract maintenance and client support.</li>
@@ -176,10 +201,17 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 		
 		<div>
-			<img src="/brainevo.svg" alt="BrainEvo Logo" class="h-7 mb-2 mt-4" />
+			<img src="/brainevo.svg" alt="BrainEvo Logo" class="h-7 mb-2 mt-4 dark:opacity-70" />
 			<h4 class="flex justify-between w-full"><span>Part-time Fingerprint Sampler & Analyst — BrainEvo</span> <i>2023 - Present</i></h4>
 			<h5>(occasional weekends, peak after school enrollment)</h5>
-			<ul>
+			<ul data-en="
+				<li>Captured full 10-print fingerprint sets for clients across all ages (infants to elderly), primarily through <b>institutional drives</b> (e.g., schools), <b>organizational events</b>, and <b>corporate registrations</b>.</li>
+				<li>Processed and analyzed biometric data using BrainEvo Software, applying strict quality-control and chain-of-custody procedures to ensure <b>accurate and reliable</b> classification/matching.</li>
+				<li>Prepared clear analytical reports and maintained precise, secure documentation for clients. contributed to a project database covering <b>2000+ subjects</b> (~20,000 impressions).</li>"
+				data-id="
+				<li>Mengambil set lengkap 10 sidik jari untuk klien dari semua usia (bayi hingga lansia), terutama melalui <b>kegiatan institusi</b> (misalnya, sekolah), <b>acara organisasi</b>, dan <b>pendaftaran korporat</b>.</li>
+				<li>Memproses dan menganalisis data biometrik menggunakan Perangkat Lunak BrainEvo, menerapkan prosedur kendali mutu yang ketat untuk memastikan klasifikasi atau pencocokan yang <b>akurat dan andal</b>.</li>
+				<li>Menyiapkan laporan analitis yang jelas dan memelihara dokumentasi yang presisi serta aman untuk klien. Berkontribusi pada basis data proyek yang mencakup <b>2000+ subjek</b> (~20.000 impresi).</li>">
 				<li>Captured full 10-print fingerprint sets for clients across all ages (infants to elderly), primarily through <b>institutional drives</b> (e.g., schools), <b>organizational events</b>, and <b>corporate registrations</b>.</li>
 				<li>Processed and analyzed biometric data using BrainEvo Software, applying strict quality-control and chain-of-custody procedures to ensure <b>accurate and reliable</b> classification/matching.</li>
 				<li>Prepared clear analytical reports and maintained precise, secure documentation for clients. contributed to a project database covering <b>2000+ subjects</b> (~20,000 impressions).</li>
@@ -188,11 +220,20 @@ import Layout from "../layouts/Layout.astro";
 		
 		<div>
 			<div class="w-fit">
-				<a href="https://www.panasonic.com/id/" class="w-min" tabindex="-1"><img src="/panasonic.svg" alt="Panasonic Logo" class="h-6 mb-2 mt-4" /></a>
+				<a href="https://www.panasonic.com/id/" class="w-min dark:opacity-85" tabindex="-1"><img src="/panasonic.svg" alt="Panasonic Logo" class="h-6 mb-2 mt-4" /></a>
 			</div>
 			<h4 class="flex justify-between w-full"><span>Freelance Designer — <a href="/https://www.panasonic.com/id/">Panasonic Gobel</a></span> <i>Jan 2024 | Sahid Sudirman Centre lt. 17</i></h4>
 			<h5>(”Review & Win | Top Spender” & “Free Delivery | Promo Combo”)</h5>
-			<ul>
+			<ul data-en="
+				<li>Designed and delivered visual assets for Panasonic’s New Year 2024, meeting corporate briefs and deadlines.</li>
+				<li>Collaborated with marketing and brand stakeholders to ensure alignment and timely delivery of materials.</li>
+				<li>Created digital assets for two promotional programs—<b>Free Delivery & Promo Combo</b> and <b>Review & Win (Top Spender)</b>—from concept through final production.</li>
+				<li>Produced e-commerce banners optimized for <b>Tokopedia, Shopee, and Lazada</b> and developed Instagram Story creatives tailored to campaign strategy and brand guidelines.</li>"
+				data-id="
+				<li>Mendesain dan mengirimkan aset visual untuk Panasonic dalam rangka Tahun Baru 2024, memenuhi brief dan tenggat waktu perusahaan.</li>
+				<li>Berkolaborasi dengan pemangku kepentingan pemasaran dan merek untuk memastikan keselarasan dan pengiriman materi tepat waktu.</li>
+				<li>Membuat aset digital untuk dua program promosi—<b>Gratis Pengiriman & Promo Combo</b> dan <b>Review & Menang (Pembelanja Terbanyak)</b>—dari konsep hingga produksi akhir.</li>
+				<li>Memproduksi banner e-commerce yang dioptimalkan untuk <b>Tokopedia, Shopee, dan Lazada</b> serta mengembangkan materi kreatif Instagram Story yang disesuaikan dengan strategi kampanye dan panduan merek.</li>">
 				<li>Designed and delivered visual assets for Panasonic’s New Year 2024, meeting corporate briefs and deadlines.</li>
 				<li>Collaborated with marketing and brand stakeholders to ensure alignment and timely delivery of materials.</li>
 				<li>Created digital assets for two promotional programs—<b>Free Delivery & Promo Combo</b> and <b>Review & Win (Top Spender)</b>—from concept through final production.</li>
@@ -201,17 +242,20 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</section>
 
-	<div class="border-b-1 border-zinc-300 w-full"></div>
+	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
-	<section class="title">
+	<section class="title" id="education">
 		<h3>Education</h3>
 		<div>
 			<!-- <div class="w-fit">
 				<img src="/unsia.png" alt="Unsia Logo" class="h-10 mb-2 mt-4" />
 			</div> -->
-			<h4 class="flex justify-between w-full"><span>Bachelor of Information Systems</span> <i>Universitas Siber Asia (Expected graduation: Q4 2026)</i></h4>
+			<h4 class="flex justify-between w-full"
+			data-en="<span>Bachelor of Information Systems</span> <i>Universitas Siber Asia (Expected graduation: Q4 2026)</i>"
+			data-id="<span>Sarjana Sistem Informasi</span> <i>Universitas Siber Asia (Perkiraan lulus: Q4 2026)</i>">
+				<span>Bachelor of Information Systems</span> <i>Universitas Siber Asia (Expected graduation: Q4 2026)</i></h4>
 			<p>
-				<b>Relevant Coursework:</b> Software Engineering (SDLC), Object-Oriented Programming, Advanced Programming, Database Systems (MySQL, Data Warehouse/OLAP), Web Development (Frontend Frameworks & Web Technologies), Systems Analysis & ERP, Data Analytics (Statistics & BI).
+				<b data-en="<b>Relevant Coursework:</b>" data-id="<b>Kasus pekerjaan yang sesuai:</b>">Relevant Coursework:</b> Software Engineering (SDLC), Object-Oriented Programming, Advanced Programming, Database Systems (MySQL, Data Warehouse/OLAP), Web Development (Frontend Frameworks & Web Technologies), Systems Analysis & ERP, Data Analytics (Statistics & BI).
 			</p>
 		</div>
 		
@@ -219,29 +263,36 @@ import Layout from "../layouts/Layout.astro";
 			<!-- <div class="w-fit">
 				<img src="/gitaja.png" alt="gitaja Logo" class="h-12 mt-4 -translate-x-1" />
 			</div> -->
-			<h4 class="flex justify-between w-full"><span>Adobe Illustrator & Freelancer Cource</span> <i>Git Kreatif by Git Aja</i></h4>
+			<h4 class="flex justify-between w-full"
+			data-en="<span>Adobe Illustrator & Freelancer Cource</span> <i>Git Kreatif by Git Aja</i>"
+			data-id="<span>Kursus Adobe Illustrator & Freelancer</span> <i>Git Kreatif oleh Git Aja</i>">
+				<span>Adobe Illustrator & Freelancer Cource</span> <i>Git Kreatif by Git Aja</i></h4>
 			<p>
-				<b>Relevant Coursework:</b> Illustrator, Freelance Bussiness Skills (portfolio, pricing, invoicing, client negotiation), Color Theory, Typography, Logo Design (incl. golden ratio, brand guidelines), Packaging Design, Merchandise Design (cup, t-shirt, etc), Marketing Assets & Social Media (ads, IG Story, FB cover, carousel posts, e-commerce assets , etc)Digital Illustration & Icon Sets (isometric, character, vector illustration).
+				<b data-en="<b>Relevant Coursework:</b>" data-id="<b>Kasus pekerjaan yang sesuai:</b>">Relevant Coursework:</b> Illustrator, Freelance Bussiness Skills (portfolio, pricing, invoicing, client negotiation), Color Theory, Typography, Logo Design (incl. golden ratio, brand guidelines), Packaging Design, Merchandise Design (cup, t-shirt, etc), Marketing Assets & Social Media (ads, IG Story, FB cover, carousel posts, e-commerce assets , etc)Digital Illustration & Icon Sets (isometric, character, vector illustration).
 			</p>
 		</div>
 		
 		<div>
-			<h4 class="flex justify-between w-full"><span>Vocational High School — Software Engineering</span> <i>SMK Negeri 1 Cianjur (Graduated 2021)</i></h4>
+			<h4 class="flex justify-between w-full"
+			data-en="<span>Vocational High School — Software Engineering</span> <i>SMK Negeri 1 Cianjur (Graduated 2021)</i>"
+			data-id="<span>SMK — Rekayasa Perangkat Lunak</span> <i>SMK Negeri 1 Cianjur (Lulus 2021)</i>">
+				<span>Vocational High School — Software Engineering</span> <i>SMK Negeri 1 Cianjur (Graduated 2021)</i></h4>
 			<p>
-				<b>Relevant Coursework:</b> Programming (Php, Java), Object-Oriented Programming, Web Development (HTML, CSS, JavaScript), Database Systems (MySQL), Laravel (PHP Framework), UI/UX Basics.
+				<b data-en="<b>Relevant Coursework:</b>" data-id="<b>Kasus pekerjaan yang sesuai:</b>">Relevant Coursework:</b> Programming (Php, Java), Object-Oriented Programming, Web Development (HTML, CSS, JavaScript), Database Systems (MySQL), Laravel (PHP Framework), UI/UX Basics.
 			</p>
 		</div>
 	</section>
 
-	<div class="border-b-1 border-zinc-300 w-full"></div>
+	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
-	<div class="w-full gap-8 grid grid-cols-2">
+	<div class="w-full gap-8 grid grid-cols-2" id="etc">
 		<section class="title">
 			<h3>Leadership & Involvement</h3>
 			<div>
 				<ul>
 					<li><b>agerr.studio — Founder</b></li>
-					<p>Lead vision, strategy, and execution of creative projects; coordinate design, content, and technical tasks across small teams and collaborators.</p>
+					<p data-en="Lead vision, strategy, and execution of creative projects; coordinate design, content, and technical tasks across small teams and collaborators."
+					data-id="Memimpin visi, strategi, dan eksekusi proyek kreatif. Saya mengoordinasikan tugas-tugas desain, konten, dan teknis, baik dalam tim kecil maupun dengan para kolaborator.">Lead vision, strategy, and execution of creative projects; coordinate design, content, and technical tasks across small teams and collaborators.</p>
 				</ul>
 			</div>
 		</section>
@@ -256,9 +307,9 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 	</div>
 
-	<div class="border-b-1 border-zinc-300 w-full"></div>
+	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
-	<section class="title">
+	<section class="title select-none" id="projects">
 		<h3>Projects Highlight</h3>
 		<div class="grid grid-cols-2 gap-6">
 			<div class="space-y-2">
@@ -279,5 +330,6 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</div>
 	</section>
+
 </Layout>
 

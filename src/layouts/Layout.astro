@@ -5,34 +5,325 @@ import { Icon } from 'astro-icon/components'
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
 		<title>Ziel Alfino</title>
+
+		<!-- init script: harus sebelum stylesheet -->
+		<script>
+		(function () {
+			const KEY = 'isDark';
+			try {
+			let stored = localStorage.getItem(KEY);
+			if (stored === null) {
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				stored = prefersDark ? 'true' : 'false';
+				localStorage.setItem(KEY, stored);
+			}
+			document.documentElement.classList.toggle('dark', stored === 'true');
+			} catch (e) {
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.classList.add('dark');
+			}
+			}
+		})();
+		</script>
 	</head>
 	<body>
-        <section class="w-full flex justify-center">
+        <section class="w-full flex justify-center dark:bg-zinc-900">
 			<div class="fixed top-0 w-full z-10 flex justify-between items-center p-5">
 				<a href="https://agerrstudio.com" tabindex="-1">
 					<div class="flex items-center">
-						<svg class="h-4 mr-3 -translate-y-[30%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080"><path d="M1080,939.48v129.21a11.31,11.31,0,0,1-11.31,11.31H759.8a11.31,11.31,0,0,1-10.73-14.9l68.17-203.54a134.36,134.36,0,0,0-11-109.71L551.19,309a12.91,12.91,0,0,0-22.38,0L273.72,751.85a134.36,134.36,0,0,0-11,109.71l68.17,203.54A11.31,11.31,0,0,1,320.2,1080H11.31A11.31,11.31,0,0,1,0,1068.69V939.48A712.42,712.42,0,0,1,88.64,595.3L401.54,28.06A54.26,54.26,0,0,1,449.07,0H630.93a54.26,54.26,0,0,1,47.53,28.06L991.36,595.3A712.42,712.42,0,0,1,1080,939.48Z" fill="#27272a"></path><circle cx="540.75" cy="816.34" r="118.61" fill="#27272a"></circle></svg>
-						<svg viewBox="0 0 142.85 27.57" class="h-4"><g><path fill="#27272a" d="m122.74.41v6.72h-3.76c-.86-1.85-2.2-2.77-4.02-2.77-1.16,0-2.09.38-2.78,1.15-.69.77-1.04,1.8-1.04,3.09,0,1.56.36,2.72,1.09,3.46s1.63,1.12,2.69,1.12c.84,0,1.64-.24,2.39-.73.75-.48,1.36-1.13,1.81-1.92l4.11,1.8c-1.53,3.33-4.21,5-8.04,5-2.88,0-5.18-.79-6.9-2.36-1.72-1.57-2.57-3.68-2.57-6.31s.84-4.71,2.52-6.23c1.68-1.52,3.64-2.28,5.87-2.28,1.79,0,3.46.54,5.01,1.62V.41h3.61Z"></path><path fill="#27272a" d="m134.15,17.34c-2.44,0-4.5-.77-6.18-2.32-1.68-1.54-2.52-3.66-2.52-6.35s.84-4.81,2.52-6.35c1.68-1.55,3.74-2.32,6.18-2.32s4.52.77,6.19,2.32c1.68,1.54,2.51,3.66,2.51,6.35s-.83,4.77-2.49,6.33c-1.66,1.56-3.73,2.34-6.22,2.34Zm-.02-4.1c.98,0,1.78-.38,2.39-1.13.61-.75.92-1.93.92-3.54,0-1.41-.3-2.52-.89-3.31-.59-.79-1.4-1.19-2.41-1.19-2.18,0-3.27,1.57-3.27,4.72,0,1.29.27,2.35.81,3.19s1.36,1.26,2.45,1.26Z"></path><path fill="#27272a" d="m34.02,16.62c-2.68,1.11-5.29,1.26-7.87.06-1.68-.78-3-1.96-3.91-3.59-1.84-3.28-1.42-7.22,1.1-10.04C26.1-.05,29.6-.56,34.49,1.44c.76-.87,2.47-1.35,3.54-.87.34.16.72.71.72,1.08.03,6.04.21,12.09-.06,18.12-.25,5.61-6.17,9.19-11.58,7.29-1.16-.41-2.23-1.06-3.32-1.65-.83-.45-1.02-1.06-.34-1.84.53-.6,1.04-1.22,1.49-1.88.48-.7.87-.57,1.56-.22,1.15.59,2.41,1.27,3.63,1.3,2.94.07,4.55-2.54,3.88-6.14Zm-4.11-11.91c-2.44.02-4.16,1.73-4.16,4.14,0,2.42,1.83,4.21,4.27,4.19,2.37-.02,4.16-1.81,4.17-4.17.01-2.43-1.78-4.17-4.28-4.15Z"></path><path fill="#27272a" d="m13.37,1.48c.74-.91,2.82-1.45,3.7-.9.31.19.58.7.58,1.07.04,4.72.03,9.44.03,14.15,0,.83-.39,1.31-1.24,1.24-.99-.08-2.08.38-2.96-.53-.14-.15-.72.04-1.06.18C7.09,18.86,1.29,15.93.19,10.46-.49,7.04.66,4.19,3.33,2.06,6.01-.07,9.03-.54,12.23.91c.36.16.71.35,1.15.57Zm-4.53,3.23c-2.45,0-4.18,1.7-4.2,4.1-.02,2.43,1.79,4.23,4.23,4.22,2.43,0,4.24-1.85,4.2-4.26-.04-2.4-1.78-4.07-4.24-4.07Z"></path><path fill="#27272a" d="m48.1,11.77c1.41,1.27,3.24,1.47,4.67.46,1-.7,1.66-.55,2.29.38.07.1.16.18.23.27,1.68,1.95,1.68,2.15-.65,3.42-3.02,1.65-6.05,1.39-8.85-.48-2.9-1.94-4.23-4.78-3.77-8.25.46-3.53,2.52-5.89,5.86-7.08,5.51-1.96,9.45,2.16,10.59,6.53.21.79-.31.96-.85,1.16-2.74,1.01-5.47,2.02-8.21,3.03-.4.15-.79.33-1.33.55Zm4.38-6.44c-1.28-1-2.36-.84-3.4-.45-1.05.39-1.85,1.08-2.3,2.56,2.04-.75,3.74-1.38,5.7-2.11Z"></path><path fill="#27272a" d="m66.85,2.68c1.36-.79,2.63-1.68,4.03-2.29,1.48-.64,2-.17,1.92,1.42-.01.28-.08.56-.07.83.09,1.4-.35,2.06-1.96,2.19-2.33.19-3.68,2.01-3.7,4.4-.02,2.16-.03,4.31,0,6.47.02,1.02-.4,1.45-1.42,1.45-3.42-.02-3.23.28-3.22-3.13.01-3.95,0-7.91,0-11.86,0-1.45.23-1.67,1.66-1.68.32,0,.64.02.96,0,1.03-.08,1.59.34,1.62,1.41,0,.3.12.6.16.8Z"></path><path fill="#27272a" d="m80.56,2.7c1.32-.78,2.55-1.67,3.9-2.27,1.59-.71,2.13-.24,2.04,1.49,0,.16-.02.32-.03.48q-.17,1.98-2.1,2.39c-2.25.48-3.57,2.09-3.59,4.43-.02,2.16-.03,4.31,0,6.47.02,1.01-.37,1.47-1.4,1.47-3.45-.02-3.22.29-3.21-3.12,0-3.87,0-7.75,0-11.62,0-1.8.13-1.93,1.88-1.94.24,0,.48.02.72,0,1.03-.09,1.6.33,1.63,1.41,0,.31.11.61.15.82Z"></path><path fill="#27272a" d="m92.81,14.36c-.02-1.57,1.14-2.78,2.67-2.78,1.45,0,2.68,1.18,2.73,2.65.06,1.48-1.22,2.78-2.71,2.78-1.5,0-2.67-1.15-2.69-2.64Z"></path></g></svg>
+						<svg class="h-4 mr-3 -translate-y-[30%] dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080"><path d="M1080,939.48v129.21a11.31,11.31,0,0,1-11.31,11.31H759.8a11.31,11.31,0,0,1-10.73-14.9l68.17-203.54a134.36,134.36,0,0,0-11-109.71L551.19,309a12.91,12.91,0,0,0-22.38,0L273.72,751.85a134.36,134.36,0,0,0-11,109.71l68.17,203.54A11.31,11.31,0,0,1,320.2,1080H11.31A11.31,11.31,0,0,1,0,1068.69V939.48A712.42,712.42,0,0,1,88.64,595.3L401.54,28.06A54.26,54.26,0,0,1,449.07,0H630.93a54.26,54.26,0,0,1,47.53,28.06L991.36,595.3A712.42,712.42,0,0,1,1080,939.48Z" fill="currentColor"></path><circle cx="540.75" cy="816.34" r="118.61" fill="currentColor"></circle></svg>
+						<svg viewBox="0 0 142.85 27.57" class="h-4 dark:text-white"><g><path fill="currentColor" d="m122.74.41v6.72h-3.76c-.86-1.85-2.2-2.77-4.02-2.77-1.16,0-2.09.38-2.78,1.15-.69.77-1.04,1.8-1.04,3.09,0,1.56.36,2.72,1.09,3.46s1.63,1.12,2.69,1.12c.84,0,1.64-.24,2.39-.73.75-.48,1.36-1.13,1.81-1.92l4.11,1.8c-1.53,3.33-4.21,5-8.04,5-2.88,0-5.18-.79-6.9-2.36-1.72-1.57-2.57-3.68-2.57-6.31s.84-4.71,2.52-6.23c1.68-1.52,3.64-2.28,5.87-2.28,1.79,0,3.46.54,5.01,1.62V.41h3.61Z"></path><path fill="currentColor" d="m134.15,17.34c-2.44,0-4.5-.77-6.18-2.32-1.68-1.54-2.52-3.66-2.52-6.35s.84-4.81,2.52-6.35c1.68-1.55,3.74-2.32,6.18-2.32s4.52.77,6.19,2.32c1.68,1.54,2.51,3.66,2.51,6.35s-.83,4.77-2.49,6.33c-1.66,1.56-3.73,2.34-6.22,2.34Zm-.02-4.1c.98,0,1.78-.38,2.39-1.13.61-.75.92-1.93.92-3.54,0-1.41-.3-2.52-.89-3.31-.59-.79-1.4-1.19-2.41-1.19-2.18,0-3.27,1.57-3.27,4.72,0,1.29.27,2.35.81,3.19s1.36,1.26,2.45,1.26Z"></path><path fill="currentColor" d="m34.02,16.62c-2.68,1.11-5.29,1.26-7.87.06-1.68-.78-3-1.96-3.91-3.59-1.84-3.28-1.42-7.22,1.1-10.04C26.1-.05,29.6-.56,34.49,1.44c.76-.87,2.47-1.35,3.54-.87.34.16.72.71.72,1.08.03,6.04.21,12.09-.06,18.12-.25,5.61-6.17,9.19-11.58,7.29-1.16-.41-2.23-1.06-3.32-1.65-.83-.45-1.02-1.06-.34-1.84.53-.6,1.04-1.22,1.49-1.88.48-.7.87-.57,1.56-.22,1.15.59,2.41,1.27,3.63,1.3,2.94.07,4.55-2.54,3.88-6.14Zm-4.11-11.91c-2.44.02-4.16,1.73-4.16,4.14,0,2.42,1.83,4.21,4.27,4.19,2.37-.02,4.16-1.81,4.17-4.17.01-2.43-1.78-4.17-4.28-4.15Z"></path><path fill="currentColor" d="m13.37,1.48c.74-.91,2.82-1.45,3.7-.9.31.19.58.7.58,1.07.04,4.72.03,9.44.03,14.15,0,.83-.39,1.31-1.24,1.24-.99-.08-2.08.38-2.96-.53-.14-.15-.72.04-1.06.18C7.09,18.86,1.29,15.93.19,10.46-.49,7.04.66,4.19,3.33,2.06,6.01-.07,9.03-.54,12.23.91c.36.16.71.35,1.15.57Zm-4.53,3.23c-2.45,0-4.18,1.7-4.2,4.1-.02,2.43,1.79,4.23,4.23,4.22,2.43,0,4.24-1.85,4.2-4.26-.04-2.4-1.78-4.07-4.24-4.07Z"></path><path fill="currentColor" d="m48.1,11.77c1.41,1.27,3.24,1.47,4.67.46,1-.7,1.66-.55,2.29.38.07.1.16.18.23.27,1.68,1.95,1.68,2.15-.65,3.42-3.02,1.65-6.05,1.39-8.85-.48-2.9-1.94-4.23-4.78-3.77-8.25.46-3.53,2.52-5.89,5.86-7.08,5.51-1.96,9.45,2.16,10.59,6.53.21.79-.31.96-.85,1.16-2.74,1.01-5.47,2.02-8.21,3.03-.4.15-.79.33-1.33.55Zm4.38-6.44c-1.28-1-2.36-.84-3.4-.45-1.05.39-1.85,1.08-2.3,2.56,2.04-.75,3.74-1.38,5.7-2.11Z"></path><path fill="currentColor" d="m66.85,2.68c1.36-.79,2.63-1.68,4.03-2.29,1.48-.64,2-.17,1.92,1.42-.01.28-.08.56-.07.83.09,1.4-.35,2.06-1.96,2.19-2.33.19-3.68,2.01-3.7,4.4-.02,2.16-.03,4.31,0,6.47.02,1.02-.4,1.45-1.42,1.45-3.42-.02-3.23.28-3.22-3.13.01-3.95,0-7.91,0-11.86,0-1.45.23-1.67,1.66-1.68.32,0,.64.02.96,0,1.03-.08,1.59.34,1.62,1.41,0,.3.12.6.16.8Z"></path><path fill="currentColor" d="m80.56,2.7c1.32-.78,2.55-1.67,3.9-2.27,1.59-.71,2.13-.24,2.04,1.49,0,.16-.02.32-.03.48q-.17,1.98-2.1,2.39c-2.25.48-3.57,2.09-3.59,4.43-.02,2.16-.03,4.31,0,6.47.02,1.01-.37,1.47-1.4,1.47-3.45-.02-3.22.29-3.21-3.12,0-3.87,0-7.75,0-11.62,0-1.8.13-1.93,1.88-1.94.24,0,.48.02.72,0,1.03-.09,1.6.33,1.63,1.41,0,.31.11.61.15.82Z"></path><path fill="currentColor" d="m92.81,14.36c-.02-1.57,1.14-2.78,2.67-2.78,1.45,0,2.68,1.18,2.73,2.65.06,1.48-1.22,2.78-2.71,2.78-1.5,0-2.67-1.15-2.69-2.64Z"></path></g></svg>
 					</div>
 				</a>
 				<div class="flex space-x-2 items-center justify-center">
-					<button class="font-nunito text-[14px] h-[32px] justify-center flex items-center cursor-pointer transition outline-none focus:ring-1 focus:ring-stone-400 bg-white focus-visible:ring-sky-400 focus:bg-stone-200 hover:bg-stone-100 px-1.75 rounded-md"><Icon name="mingcute:share-3-line" class="mr-1.5 text-lg" />Bagikan</button>
-					<button class="font-nunito aspect-square h-[32px] justify-center text-[14px] flex items-center cursor-pointer transition outline-none focus:ring-1 focus:ring-stone-400 bg-white focus-visible:ring-sky-400 focus:bg-stone-200 hover:bg-stone-100 p-1 rounded-md"><Icon name="mingcute:sun-fill" class="text-2xl"/></button>
-					<button class="font-nunito aspect-square h-[32px] justify-center text-[14px] flex items-center cursor-pointer transition outline-none focus:ring-1 focus:ring-stone-400 bg-white focus-visible:ring-sky-400 focus:bg-stone-200 hover:bg-stone-100 p-1 rounded-md"><Icon name="mingcute:moon-stars-fill" class="text-xl"/></button>
-					<button class="font-nunito text-[14px] flex items-center cursor-pointer transition outline-none focus:ring-1 focus:ring-stone-400 bg-white focus-visible:ring-sky-400 focus:bg-stone-200 hover:bg-stone-100 p-1 rounded-md"><Icon name="mingcute:dot-grid-fill" class="text-2xl"/></button>
+					
+					<button id="open-share" class="font-nunito text-[14px] h-[32px] justify-center flex items-center cursor-pointer transition outline-none focus-visible:ring-1 bg-white dark:bg-zinc-900 dark:text-zinc-300 focus-visible:ring-sky-400 focus-visible:bg-stone-100 dark:focus-visible:bg-zinc-700/50 active:bg-stone-300 dark:active:bg-zinc-700/50 hover:bg-stone-200 dark:hover:bg-zinc-800/80 px-1.75 rounded-md dark:ring-0 dark:focus:ring-0 dark:focus-visible:ring-1"><Icon name="mingcute:share-3-line" class="mr-1.5 text-lg" />Share</button>
+					<button id="toggle-lang" class="font-nunito aspect-square h-[32px] justify-center text-[14px] flex items-center cursor-pointer transition outline-none focus-visible:ring-1 bg-white dark:bg-zinc-900 dark:text-zinc-300 focus-visible:ring-sky-400 focus-visible:bg-stone-100 dark:focus-visible:bg-zinc-700/50 active:bg-stone-300 dark:active:bg-zinc-700/50 hover:bg-stone-200 dark:hover:bg-zinc-800/80 p-1 rounded-md dark:ring-0 dark:focus:ring-0 dark:focus-visible:ring-1">EN</button>
+					<script>
+						document.addEventListener('DOMContentLoaded', () => {
+							const togglelang = document.getElementById('toggle-lang');
+							if (!togglelang) return;
+
+							const elems = Array.from(document.querySelectorAll('[data-en]'));
+
+							const apply = (lang) => {
+								document.documentElement.lang = lang;
+								togglelang.textContent = lang.toUpperCase();
+								togglelang.setAttribute('aria-pressed', String(lang === 'id'));
+								localStorage.setItem('site-lang', lang);
+								elems.forEach(el => {
+									const txt = el.dataset[lang] ?? el.dataset.en ?? el.innerHTML;
+									el.innerHTML = txt;
+								});
+							};
+
+							const saved = localStorage.getItem('site-lang') || (document.documentElement.lang || 'en');
+							apply(saved === 'id' ? 'id' : 'en');
+
+							togglelang.addEventListener('click', () => {
+								const next = document.documentElement.lang === 'en' ? 'id' : 'en';
+								apply(next);
+							});
+						});
+					</script>
+						
+					<!-- <button class="font-nunito aspect-square h-[32px] justify-center text-[14px] flex items-center cursor-pointer transition outline-none focus-visible:ring-1 bg-white dark:bg-zinc-900 dark:text-zinc-300 focus-visible:ring-sky-400 focus-visible:bg-stone-100 dark:focus-visible:bg-zinc-700/50 active:bg-stone-300 dark:active:bg-zinc-700/50 hover:bg-stone-200 dark:hover:bg-zinc-800/80 p-1 rounded-md dark:ring-0 dark:focus:ring-0 dark:focus-visible:ring-1"><Icon name="mingcute:sun-fill" class="text-xl"/><Icon name="mingcute:moon-stars-fill" class="text-xl"/></button>
+					<button class="font-nunito aspect-square h-[32px] justify-center text-[14px] flex items-center cursor-pointer transition outline-none focus-visible:ring-1 bg-white dark:bg-zinc-900 dark:text-zinc-300 focus-visible:ring-sky-400 focus-visible:bg-stone-100 dark:focus-visible:bg-zinc-700/50 active:bg-stone-300 dark:active:bg-zinc-700/50 hover:bg-stone-200 dark:hover:bg-zinc-800/80 p-1 rounded-md dark:ring-0 dark:focus:ring-0 dark:focus-visible:ring-1"><Icon name="mingcute:moon-stars-fill" class="text-xl"/></button> -->
+					<button data-theme-toggle class="font-nunito aspect-square h-[32px] justify-center text-[14px] flex items-center cursor-pointer transition outline-none focus-visible:ring-1 bg-white dark:bg-zinc-900 dark:text-zinc-300 focus-visible:ring-sky-400 focus-visible:bg-stone-100 dark:focus-visible:bg-zinc-700/50 active:bg-stone-300 dark:active:bg-zinc-700/50 hover:bg-stone-200 dark:hover:bg-zinc-800/80 p-1 rounded-md dark:ring-0 dark:focus:ring-0 dark:focus-visible:ring-1">
+						<Icon name="mingcute:sun-fill"  class="icon-sun inline-flex dark:hidden text-xl"/>
+						<Icon name="mingcute:moon-stars-fill" class="icon-moon hidden dark:inline-flex text-xl"/>
+					</button>
+					<script>
+						(function () {
+						const KEY = 'isDark';
+						const btn = document.querySelector('[data-theme-toggle]');
+						if (!btn) return;
+
+						const sunEl  = btn.querySelector('.icon-sun');
+						const moonEl = btn.querySelector('.icon-moon');
+
+						function safeGet() {
+							try { return localStorage.getItem(KEY); } catch (e) { return null; }
+						}
+						function safeSet(v) {
+							try { localStorage.setItem(KEY, v); } catch (e) { /* ignore */ }
+						}
+						function updateButtonUI(isDark) {
+						btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+
+						// show/hide dengan class tailwind utility (hidden / inline-flex)
+						if (sunEl && moonEl) {
+							sunEl.classList.toggle('hidden', isDark);          // hide sun when dark
+							sunEl.classList.toggle('inline-flex', !isDark);    // show sun when light
+
+							moonEl.classList.toggle('hidden', !isDark);        // hide moon when light
+							moonEl.classList.toggle('inline-flex', isDark);    // show moon when dark
+						}
+						}
+						function applyTheme(isDark) {
+							document.documentElement.classList.toggle('dark', isDark);
+							safeSet(isDark ? 'true' : 'false');
+							updateButtonUI(isDark);
+							// beri tahu script lain di tab yang sama
+							window.dispatchEvent(new CustomEvent('theme:changed', { detail: { isDark } }));
+						}
+
+						const stored = safeGet();
+						const initial = stored === null ? document.documentElement.classList.contains('dark') : stored === 'true';
+						updateButtonUI(initial);
+
+						btn.addEventListener('click', () => {
+							const cur = safeGet() === 'true';
+							applyTheme(!cur);
+						});
+
+						window.addEventListener('storage', (e) => {
+							if (e.key === KEY) {
+							const newVal = e.newValue === 'true';
+							document.documentElement.classList.toggle('dark', newVal);
+							updateButtonUI(newVal);
+							}
+						});
+						})();
+					</script>
+						
+					<button id="burger-toggle" class="font-nunito text-[14px] flex items-center cursor-pointer transition outline-none focus-visible:ring-1 bg-white dark:bg-zinc-900 dark:text-zinc-300 focus-visible:ring-sky-400 focus-visible:bg-stone-100 dark:focus-visible:bg-zinc-700/50 active:bg-stone-300 dark:active:bg-zinc-700/50 hover:bg-stone-200 dark:hover:bg-zinc-800/80 p-1 rounded-md dark:ring-0 dark:focus:ring-0 dark:focus-visible:ring-1"><Icon name="mingcute:dot-grid-fill" class="text-2xl"/></button>
 				</div>
-				<div class="absolute right-8 top-17 bg-white border-zinc-300 border-1 rounded-lg rounded-se-none  w-[120px] text-center">
-					<div class="absolute right-0 -top-3 w-0 h-0 border-t-12 border-t-transparent border-r-12 border-r-zinc-300 translate-x-[1px]"></div>
-					<div class="absolute right-[1px] -top-[10px] w-0 h-0 border-t-[10px] border-t-transparent border-r-[10.3px] border-r-white translate-x-[1px]"></div>
-					<button class="w-full font-nunito transition-colors rounded-lg text-[14px] flex items-center justify-center cursor-pointer py-1.5 hover:bg-stone-100 focus-visible:bg-sky-100 focus:bg-stone-200 outline-none"><Icon name="mingcute:download-2-fill" class="mr-1.5" />My CV</button>
-					<button class="w-full font-nunito transition-colors rounded-lg text-[14px] flex items-center justify-center cursor-pointer py-1.5 hover:bg-stone-100 focus-visible:bg-sky-100 focus:bg-stone-200 outline-none"><Icon name="mingcute:web-fill" class="mr-1.5" />Portfolio</button>
-					<button class="w-full font-nunito transition-colors rounded-lg text-[14px] flex items-center justify-center cursor-pointer py-1.5 hover:bg-stone-100 focus-visible:bg-sky-100 focus:bg-stone-200 outline-none">Social Media</button>
+				<div id="burger-modal" class="hidden absolute right-8 top-17 bg-white dark:bg-zinc-900 dark:text-zinc-300 border-zinc-300 dark:border-zinc-700/60 border-1 rounded-lg rounded-se-none  w-[120px] text-center">
+					<div class="absolute right-0 -top-3 w-0 h-0 border-t-12 border-t-transparent border-r-12 border-r-zinc-300 dark:border-r-zinc-700/60 translate-x-[1px]"></div>
+					<div class="absolute right-[1px] -top-[10px] w-0 h-0 border-t-[10px] border-t-transparent border-r-[10.3px] border-r-white dark:border-r-zinc-900 translate-x-[1px]"></div>
+					<button id="open-cv" class="w-full font-nunito transition-colors rounded-lg text-[14px] flex items-center justify-center cursor-pointer py-1.5 hover:bg-stone-100 dark:hover:bg-zinc-800/80 focus-visible:bg-sky-100 dark:focus-visible:bg-sky-900/25 focus:bg-stone-200 dark:focus:bg-zinc-700/50 outline-none"><Icon name="mingcute:download-2-fill" class="mr-1.5" />My CV</button>
+					<button onclick="window.open('https://agerrstudio.com', 'popup', 'width=400,height=700')" class="w-full font-nunito transition-colors rounded-lg text-[14px] flex items-center justify-center cursor-pointer py-1.5 hover:bg-stone-100 dark:hover:bg-zinc-800/80 focus-visible:bg-sky-100 dark:focus-visible:bg-sky-900/25 focus:bg-stone-200 dark:focus:bg-zinc-700/50 outline-none"><Icon name="mingcute:web-fill" class="mr-1.5" />Portfolio</button>
+					<button id="open-sosmed" class="w-full font-nunito transition-colors rounded-lg text-[14px] flex items-center justify-center cursor-pointer py-1.5 hover:bg-stone-100 dark:hover:bg-zinc-800/80 focus-visible:bg-sky-100 dark:focus-visible:bg-sky-900/25 focus:bg-stone-200 dark:focus:bg-zinc-700/50 outline-none">Social Media</button>
+				</div>
+				<script>
+					const burger = document.getElementById('burger-toggle');
+					const modal = document.getElementById('burger-modal'); // pastikan id modal bener
+
+					burger.addEventListener('click', () => {
+						modal.classList.toggle('hidden');
+					});
+
+					window.addEventListener('scroll', () => {
+						if (!modal.classList.contains('hidden')) {
+							modal.classList.add('hidden');
+						}
+					});
+				</script>
+			</div>
+
+			<!-- table of content -->
+			<div class="hidden min-[1000px]:flex fixed top-18 left-8 z-20 dark:text-zinc-300 space-y-1 flex-col">
+				<button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" class="opacity-50 hover:opacity-100 focus:opacity-100 cursor-pointer hover:underline hover:font-[700] hover:tracking-wide w-min focus:tracking-wide focus:font-[700] focus:underline" tabindex="-1">Contact</button>
+				<button onclick="document.getElementById('profile').scrollIntoView({ behavior: 'smooth' })" class="opacity-50 hover:opacity-100 focus:opacity-100 cursor-pointer hover:underline hover:font-[700] hover:tracking-wide w-min focus:tracking-wide focus:font-[700] focus:underline" tabindex="-1">Profile</button>
+				<button onclick="document.getElementById('technical').scrollIntoView({ behavior: 'smooth' })" class="opacity-50 hover:opacity-100 focus:opacity-100 cursor-pointer hover:underline hover:font-[700] hover:tracking-wide w-min focus:tracking-wide focus:font-[700] focus:underline" tabindex="-1">Technical</button>
+				<button onclick="document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })" class="opacity-50 hover:opacity-100 focus:opacity-100 cursor-pointer hover:underline hover:font-[700] hover:tracking-wide w-min focus:tracking-wide focus:font-[700] focus:underline" tabindex="-1">Experience</button>
+				<button onclick="document.getElementById('education').scrollIntoView({ behavior: 'smooth' })" class="opacity-50 hover:opacity-100 focus:opacity-100 cursor-pointer hover:underline hover:font-[700] hover:tracking-wide w-min focus:tracking-wide focus:font-[700] focus:underline" tabindex="-1">Education</button>
+				<button onclick="document.getElementById('etc').scrollIntoView({ behavior: 'smooth' })" class="opacity-50 hover:opacity-100 focus:opacity-100 cursor-pointer hover:underline hover:font-[700] hover:tracking-wide w-min focus:tracking-wide focus:font-[700] focus:underline" tabindex="-1">ETC</button>
+				<button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })" class="opacity-50 hover:opacity-100 focus:opacity-100 cursor-pointer hover:underline hover:font-[700] hover:tracking-wide w-min focus:tracking-wide focus:font-[700] focus:underline" tabindex="-1">Projects</button>
+			</div>
+
+			<!-- share -->
+			<div id="share-modal" class="fixed hidden top-0 z-20 w-screen h-screen flex items-center justify-center bg-black/10 backdrop-blur-[2px]">
+				<div class="min-h-32 min-w-32 px-4 py-3 bg-white dark:bg-zinc-900 dark:text-white border-[1px] border-zinc-300 dark:border-zinc-700/60 rounded-2xl">
+					<div class="flex justify-between items-center">
+						<div>Share</div>
+						<button id="close-share" class="cursor-pointer"><Icon name="mingcute:close-fill"/></button>
+					</div>
+					<div class="flex justify-center items-center space-x-4 my-4">
+						<button id="btn-instagram" aria-label="Share to Instagram" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-gradient-to-bl from-pink-400 to-orange-300 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:instagram" class="text-3xl"/></button>
+						<button id="btn-facebook" aria-label="Share to Facebook" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-blue-400 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:facebook" class="text-3xl"/></button>
+						<button id="btn-x" aria-label="Share to X" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-zinc-700 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:x" class="text-3xl"/></button>
+						<button id="btn-whatsapp" aria-label="Share to Whatsapp" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-emerald-400 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:whatsapp" class="text-3xl"/></button>
+						<button id="btn-reddit" aria-label="Share to Reddit" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-orange-400 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:reddit" class="text-3xl"/></button>
+					</div>
+					<!-- <button onclick="navigator.clipboard.writeText('https://agerrstudio.com')" class="cursor-pointer bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 hover:dark:bg-zinc-700/70 flex items-center justify-center w-full min-w-[205px] pr-2 py-2 rounded-md opacity-75"><Icon name="mingcute:link-2-line" class="mr-2.5"/> https://zielalfino.com</button> -->
+					<button 
+					id="copy-btn"
+					onclick="navigator.clipboard.writeText('https://zielalfino.com').then(() => {
+						document.getElementById('normal-state').classList.add('hidden');
+						document.getElementById('copied-state').classList.remove('hidden');
+						setTimeout(() => {
+						document.getElementById('normal-state').classList.remove('hidden');
+						document.getElementById('copied-state').classList.add('hidden');
+						}, 2000);
+					})"
+					class="cursor-pointer bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 hover:dark:bg-zinc-700/70 flex items-center justify-center w-full min-w-[205px] pr-2 py-2 rounded-md opacity-75"
+					>
+						<span id="normal-state" class="flex items-center">
+							<Icon name="mingcute:link-2-line" class="mr-2.5"/> https://zielalfino.com
+						</span>
+						<span id="copied-state" class="hidden flex items-center">
+							<Icon name="mingcute:check-2-fill" class="mr-2.5"/> Copied!
+						</span>
+					</button>
 				</div>
 			</div>
+			<script>
+				const modal = document.getElementById('share-modal');
+				document.getElementById('open-share').addEventListener('click', () => modal.classList.remove('hidden'));
+				document.getElementById('close-share').addEventListener('click', () => modal.classList.add('hidden'));
+				// tutup saat klik di luar konten
+				modal.addEventListener('click', e => { if (e.target === modal) modal.classList.add('hidden') });
+			</script>
+			<script is:inline>
+				(() => {
+					const url = /**@type {string}*/ ('https://zielalfino.com');
+					const text = /**@type {string}*/ ('Check this out!');
+					const encUrl = encodeURIComponent(url);
+					const encText = encodeURIComponent(text);
+
+					const openPopup = (href) => {
+						// buka di window baru (target _blank). Ini tetap "tab" di desktop, di mobile bisa buka app.
+						window.open(href, '_blank', 'noopener,noreferrer');
+					};
+
+					const tryNativeShare = async (shareData, fallbackHref) => {
+						if (navigator.share) {
+						try {
+							await navigator.share(shareData);
+							return;
+						} catch (err) {
+							// user cancel or error -> fallback
+						}
+						}
+						if (fallbackHref) openPopup(fallbackHref);
+					};
+
+					// Buttons
+					document.getElementById('btn-facebook').addEventListener('click', () => {
+						openPopup(`https://www.facebook.com/sharer/sharer.php?u=${encUrl}`);
+					});
+
+					document.getElementById('btn-x').addEventListener('click', () => {
+						openPopup(`https://twitter.com/intent/tweet?url=${encUrl}&text=${encText}`);
+					});
+
+					document.getElementById('btn-whatsapp').addEventListener('click', () => {
+						// wa.me works for both mobile and desktop (desktop opens web.whatsapp)
+						openPopup(`https://wa.me/?text=${encText}%20${encUrl}`);
+					});
+
+					document.getElementById('btn-reddit').addEventListener('click', () => {
+						openPopup(`https://www.reddit.com/submit?url=${encUrl}&title=${encText}`);
+					});
+
+					// Instagram: coba native share dulu. Kalau nggak ada, fallback ke profile (atau copy link)
+					document.getElementById('btn-instagram').addEventListener('click', () => {
+						// Web Share API might show Instagram in the system share sheet if available
+						tryNativeShare(
+						{ title: text, text: text, url: url },
+						'https://instagram.com/' // ganti dengan profile jika mau
+						);
+					});
+
+					// Copy link
+					// document.getElementById('btn-copy').addEventListener('click', async () => {
+					// 	try {
+					// 	await navigator.clipboard.writeText(url);
+					// 	// simple feedback
+					// 	const b = document.getElementById('btn-copy');
+					// 	const old = b.innerText;
+					// 	b.innerText = 'Copied!';
+					// 	setTimeout(() => b.innerText = old, 1500);
+					// 	} catch (e) {
+					// 	alert('Gagal copy. Silakan copy manual: ' + url);
+					// 	}
+					// });
+				})();
+			</script>
+
+			<!-- sosmed -->
+			<div id="sosmed-modal" class="hidden fixed top-0 z-20 w-screen h-screen flex items-center justify-center bg-black/10 backdrop-blur-[2px]">
+				<div class="min-h-32 min-w-32 px-4 py-3 bg-white dark:bg-zinc-900 dark:text-white border-[1px] border-zinc-300 dark:border-zinc-700/60 rounded-2xl">
+					<div class="flex justify-between items-center">
+						<div>Social Media</div>
+						<button id="close-sosmed" class="cursor-pointer"><Icon name="mingcute:close-fill"/></button>
+					</div>
+					<div class="flex justify-center items-center space-x-4 my-4">
+						<button onclick="window.open('https://www.instagram.com/zielalfino/')" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-gradient-to-bl from-pink-400 to-orange-300 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:instagram" class="text-3xl"/></button>
+						<button onclick="window.open('https://www.linkedin.com/in/zielfino')" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-blue-400 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:linkedin" class="text-3xl"/></button>
+						<button onclick="window.open('https://x.com/zielfino_')" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-zinc-700 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:x" class="text-3xl"/></button>
+						<button onclick="window.open('https://discord.gg/syJjTyKhhb')" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-indigo-400 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:discord" class="text-3xl"/></button>
+						<button onclick="window.open('https://wa.me/6281991879493')" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-emerald-400 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:whatsapp" class="text-3xl"/></button>
+						<!-- <button onclick="window.open('https://dribbble.com/zielfino')" class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-pink-400 rounded-md text-white flex items-center justify-center"><Icon name="simple-icons:dribbble" class="text-3xl"/></button> -->
+					</div>
+					<button onclick="window.open('https://agerrstudio.com', 'popup', 'width=400,height=700')" class="cursor-pointer bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 hover:dark:bg-zinc-700/70 flex items-center justify-center w-full py-2 rounded-md opacity-75"><Icon name="mingcute:link-2-line" class="mr-2.5"/> https://agerrstudio.com</button>
+				</div>
+			</div>
+			<script>
+				const modal = document.getElementById('sosmed-modal');
+				document.getElementById('open-sosmed').addEventListener('click', () => modal.classList.remove('hidden'));
+				document.getElementById('close-sosmed').addEventListener('click', () => modal.classList.add('hidden'));
+				// tutup saat klik di luar konten
+				modal.addEventListener('click', e => { if (e.target === modal) modal.classList.add('hidden') });
+			</script>
+
+			<!-- cv -->
+			<div id="cv-modal" class="hidden fixed top-0 z-20 w-screen h-screen flex items-center justify-center bg-black/10 backdrop-blur-[2px]">
+				<div class="min-h-32 min-w-32 px-4 py-3 bg-white dark:bg-zinc-900 dark:text-white border-[1px] border-zinc-300 dark:border-zinc-700/60 rounded-2xl">
+					<div class="flex justify-between items-center">
+						<div>Curriculum Vitae</div>
+						<button id="close-cv" class="cursor-pointer"><Icon name="mingcute:close-fill"/></button>
+					</div>
+					<div class="flex justify-center items-center space-x-4 my-4">
+						<button class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-rose-400 rounded-md text-white flex items-center justify-center"><Icon name="mingcute:paint-brush-ai-fill" class="text-3xl"/></button>
+						<button class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-zinc-700 rounded-md text-white flex items-center justify-center"><Icon name="mingcute:user-5-fill" class="text-3xl"/></button>
+						<button class="cursor-pointer hover:opacity-70 transition-opacity w-12 h-12 bg-indigo-400 rounded-md text-white flex items-center justify-center"><Icon name="mingcute:terminal-box-fill" class="text-3xl"/></button>
+					</div>
+					<button onclick="window.open('https://zielalfino.com', 'popup', 'width=400,height=700')" class="cursor-pointer bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 hover:dark:bg-zinc-700/70 flex items-center justify-center w-full min-w-[205px] pr-2 py-2 rounded-md opacity-75"><Icon name="mingcute:link-2-line" class="mr-2.5"/> https://zielalfino.com</button>
+				</div>
+			</div>
+			<script>
+				const modal = document.getElementById('cv-modal');
+				document.getElementById('open-cv').addEventListener('click', () => modal.classList.remove('hidden'));
+				document.getElementById('close-cv').addEventListener('click', () => modal.classList.add('hidden'));
+				// tutup saat klik di luar konten
+				modal.addEventListener('click', e => { if (e.target === modal) modal.classList.add('hidden') });
+			</script>
+
             <div class="w-full max-w-[710px]">
                 <slot />
             </div>
