@@ -1,17 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat+Brush&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+@theme {
+    --color-mainred: #ff7261;
+    --color-mainlight: #f8f9fa;
+
+    /* FONT */
+    --font-bebas: "Bebas Neue", cursive;
+    --font-caveat-brush: "Caveat Brush", cursive;
+    --font-caveat: "Caveat", cursive;
+    --font-inter: "Inter", sans-serif;
+    --font-manrope: "Manrope", sans-serif;
+    --font-nunito: "Nunito", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+    --font-work-sans: "Work Sans", sans-serif;
+
+    --breakpoint-xs: 500px;
+    --breakpoint-sm: 700px;
+    --breakpoint-md: 900px;
+    --breakpoint-lg: 1100px;
+    --breakpoint-xl: 1300px;  
+}
+
+img, input, button {
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: auto;
+}
+
+/* * {
+    @apply select-none
+} */
 
 h1 {
-    @apply text-[32px] font-bold tracking-wide;
+    @apply text-[32px] font-bold tracking-wide mb-2 font-manrope
 }
 
 h2 {
     @apply text-[24px];
 }
 
-h3 {
-    @apply text-[21px] font-semibold;
+
+.title {
+    @apply text-zinc-800 py-8
 }
 
-p {
-    @apply text-[14px];
+.title b {
+    @apply font-semibold
+}
+
+.title a {
+    @apply text-[14px] text-zinc-800 hover:underline visited:text-sky-600 outline-none focus:underline focus:decoration-[1.5px] focus-visible:decoration-sky-400
+}
+
+.title span {
+    @apply text-[14px] text-zinc-800
+}
+
+.title .paragraph {
+    @apply text-justify;
+}
+
+.title h3 {
+    @apply text-[21px] font-semibold tracking-wide mb-3;
+}
+
+.title h4 {
+    @apply text-[14px] font-semibold text-zinc-800 tracking-wide;
+}
+
+.title h5 {
+    @apply text-[14px] text-zinc-400;
+}
+
+.title ul {
+    @apply list-disc ml-6 mt-2.5 mb-5
+}
+
+.title p , .title li {
+    @apply text-[14px] text-zinc-600
+}
+
+.title li {
+    @apply text-[14px] text-zinc-600 text-justify mt-1
+}
+
+.title > div > p {
+    @apply mt-2.5 mb-6 text-zinc-600 text-justify
+}
+
+.title > div > ul > p {
+    @apply mt-2.5 mb-5 text-zinc-600
 }

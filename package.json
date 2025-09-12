@@ -12,5 +12,14 @@
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.5",
     "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "@iconify-json/devicon": "^1.2.43",
+    "@iconify-json/hugeicons": "^1.2.14",
+    "@iconify-json/mingcute": "^1.2.5",
+    "@iconify-json/simple-icons": "^1.2.50",
+    "@iconify-json/skill-icons": "^1.2.3",
+    "@iconify-json/vscode-icons": "^1.2.30",
+    "astro-icon": "^1.1.5"
   }
 }
