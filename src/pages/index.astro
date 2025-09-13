@@ -16,11 +16,11 @@ import Layout from "../layouts/Layout.astro";
 	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
 	<section class="title" id="contact">
-		<h3>Contact</h3>
-		<div class="flex justify-between w-full">
+		<h3 data-en="Contact" data-id="Kontak">Contact</h3>
+		<div class="flex justify-between w-full max-[760px]:flex-col max-[760px]:space-y.5-1 max-[760px]:[&>i]:font-[400] max-[760px]:[&>iopacity-7000] max-[760px]:space-y-2">
 			<a href="https://wa.me/6281991879493" target="_blank">+62 8 1991 87 9493</a>
 			<a href="mailto:zielalfinowork@gmail.com" target="_blank">zielalfinowork@gmail.com</a>
-			<span>Jakarta Timur, DKI Jakarta</span>
+			<span data-en="East Jakarta, DKI Jakarta" data-id="Jakarta Timur, DKI Jakarta">Jakarta Timur, DKI Jakarta</span>
 			<a href="https://linkedin.com/in/zielfino" target="_blank">linkedin.com/zielfino</a>
 		</div>
 	</section>
@@ -28,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
 	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
 	<section class="title" id="profile">
-		<h3>Profile</h3>
+		<h3 data-en="Profile" data-id="Profil">Profile</h3>
 		<p class="paragraph"
 			data-en="I am a design-focused front-end developer who transforms concepts directly into functional, visually refined web interfaces by designing in code. I emphasize layout, motion, interactivity, and UI logic—including theming and state management—and apply systems thinking, ergonomics, and user-flow design to streamline idea-to-implementation with minimal handoffs—or none at all. I am seeking a role in which I can lead the end-to-end delivery of polished, testable, and user-centric web products."
 			data-id="Sebagai front-end developer yang mendesain dengan kode, saya ahli dalam mengubah ide menjadi antarmuka web yang fungsional, indah, dan efisien. Saya fokus pada detail visual, interaktivitas, dan logika UI, serta menguasai desain alur pengguna untuk mempercepat proses pengembangan. Saya mencari posisi yang memungkinkan saya dadpat membantu pada pengembangan produk digital dari awal hingga akhir, memastikan hasilnya berkualitas tinggi dan berpusat pada kebutuhan pengguna.">
@@ -43,113 +43,113 @@ import Layout from "../layouts/Layout.astro";
 
 	<section class="title space-y-0" id="technical">
 		<div class="flex items-baseline space-x-2">
-			<h3>Technicals</h3>
+			<h3 data-en="Technicals" data-id="Kemampuan">Technicals</h3>
 			<h5>(sort by Relevant)</h5>
 		</div>
-		<div class="flex justify-between items-center w-full whitespace-nowrap flex-wrap">
-			<Technical icon="vscode-icons:file-type-tailwind" name="TailwindCSS" />
-			•
-			<Technical icon="vscode-icons:file-type-nuxt" name="NuxtJS" />
-			•
-			<Technical icon="vscode-icons:file-type-svelte" name="SvelteKit" />
-			•
-			<Technical icon="vscode-icons:file-type-vue" name="VueJS" />
-			•
-			<Technical icon="vscode-icons:file-type-svelte" name="Svelte" />
-			•
-			<Technical icon="vscode-icons:file-type-light-astro" name="AstroJS" />
-			•
-			<Technical icon="vscode-icons:file-type-reactjs" name="ReactJS" />
-			•
-			<Technical icon="devicon:jquery" name="jQuery" />
-			•
-			<Technical icon="vscode-icons:file-type-typescript" name="TypeScript" />
-			•
-			<Technical icon="vscode-icons:file-type-js" name="JavaScript" />
-			•
-			<Technical icon="vscode-icons:file-type-docker2" name="Docker" />
-			•
-			<Technical icon="devicon:postgresql" name="PostgreSQL" />
-			•
-			<Technical icon="devicon:mysql" name="MySQL" />
-			•
-			<Technical icon="simple-icons:github" name="GitHub" />
-			•
-			<Technical icon="devicon:cloudflare" name="Cloudflare" />
-			•
-			<Technical icon="vscode-icons:file-type-node" name="NodeJS" />
-			•
-			<Technical icon="vscode-icons:file-type-npm" name="npm" />
-			•
-			<Technical icon="vscode-icons:file-type-vite" name="Vite" />
-			•
-			<Technical icon="vscode-icons:file-type-git" name="Git" />
-			•
-			<Technical icon="simple-icons:php" name="PHP" />
-			•
-			<Technical name="Graphql" />
-			•
-			<Technical icon="skill-icons:photoshop" name="Photoshop" />
-			•
-			<Technical icon="skill-icons:illustrator" name="Illustrator" />
-			•
-			<Technical icon="skill-icons:aftereffects" name="After Effect" />
-			<!-- •
-			<Technical icon="skill-icons:premiere" name="Premier Pro" /> -->
-			•
-			<Technical icon="simple-icons:hostinger" name="Hostinger" />
-			•
+		<div class="flex justify-between max-[760px]:justify-center items-center w-full whitespace-nowrap flex-wrap select-none max-[760px]:space-y-2">
+			<Technical icon="vscode-icons:file-type-tailwind" link="https://tailwindcss.com/" name="TailwindCSS" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-nuxt" link="https://nuxt.com/" name="NuxtJS" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-svelte" link="https://svelte.dev/docs/kit/introduction" name="SvelteKit" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-vue" link="https://vuejs.org/" name="VueJS" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-svelte" link="https://svelte.dev/" name="Svelte" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-light-astro" link="https://astro.build/" name="AstroJS" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-reactjs" link="https://react.dev/" name="ReactJS" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="devicon:jquery" link="https://jquery.com/" name="jQuery" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-typescript" link="https://www.typescriptlang.org/" name="TypeScript" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-js" link="https://www.w3schools.com/js/" name="JavaScript" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-docker2" link="https://www.docker.com/" name="Docker" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="devicon:postgresql" link="https://www.postgresql.org/" name="PostgreSQL" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="devicon:mysql" link="https://www.mysql.com/" name="MySQL" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="simple-icons:github" link="https://github.com/" name="GitHub" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="devicon:cloudflare" link="https://www.cloudflare.com/" name="Cloudflare" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-node" link="https://nodejs.org" name="NodeJS" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-npm" link="https://www.npmjs.com/" name="npm" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-vite" link="https://vite.dev/" name="Vite" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="vscode-icons:file-type-git" link="https://git-scm.com/" name="Git" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="simple-icons:php" link="https://www.php.net/" name="PHP" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical name="Graphql" link="https://graphql.org/" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="skill-icons:photoshop" link="https://www.adobe.com/" name="Photoshop" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="skill-icons:illustrator" link="https://www.adobe.com/" name="Illustrator" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="skill-icons:aftereffects" link="https://www.adobe.com/" name="After Effect" />
+			<!-- <div class="max-[760px]:hidden">•</div>
+			<Technical icon="skill-icons:premiere" link="" name="Premier Pro" /> -->
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="simple-icons:hostinger" link="https://www.hostinger.com/" name="Hostinger" />
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Cloud" />
-			•
-			<Technical icon="simple-icons:nextdotjs" name="NextJS" />
-			<!-- •
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="simple-icons:nextdotjs" link="https://nextjs.org/" name="NextJS" />
+			<!-- <div class="max-[760px]:hidden">•</div>
 			<Technical name="Brand Design" />
-			•
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Logo Design" /> -->
-			<!-- •
+			<!-- <div class="max-[760px]:hidden">•</div>
 			<Technical name="Merchandise design" />
-			•
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Digital Illustrations" />
-			•
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Packaging design" />
-			•
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Icon Sets Drawing" />
-			•
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Vector Drawing" />
-			•
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Marketing & Social Media Assets" /> -->
-			•
-			<Technical icon="devicon:notion" name="Notion" />
-			•
-			<Technical icon="devicon:figma" name="Figma" />
-			•
-			<Technical icon="hugeicons:chat-gpt" name="ChatGPT" />
-			•
-			<Technical name="Vercel" />
-			•
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="devicon:notion" link="https://www.notion.com/" name="Notion" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="devicon:figma" link="https://www.figma.com/" name="Figma" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="hugeicons:chat-gpt" link="https://chatgpt.com/" name="ChatGPT" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical name="Vercel" link="https://vercel.com/"/>
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Freelance Business Skills" />
-			•
+			<div class="max-[760px]:hidden">•</div>
+			<Technical icon="simple-icons:wordpress" link="https://wordpress.com/" name="WordPress CMS(s)" />
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="AI-assisted workflow" />
-			•
-			<Technical icon="simple-icons:wordpress" name="WordPress CMS management" />
-			•
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="REST" />
-			•
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Color Theory" />
-			•
+			<div class="max-[760px]:hidden">•</div>
 			<Technical name="Typography" />
-			•
-			<Technical name="Stripe" />
-			•
-			<Technical name="TriPay" />
-			•
+			<div class="max-[760px]:hidden">•</div>
+			<Technical name="Stripe" link="https://stripe.com/" />
+			<div class="max-[760px]:hidden">•</div>
+			<Technical name="TriPay" link="https://tripay.co.id/" />
+			<div class="max-[760px]:hidden">•</div>
 		</div>
 	</section>
 
 	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
 	<section class="title" id="experience">
-		<h3>Experience</h3>
+		<h3 data-en="Experience" data-id="Pengalaman">Experience</h3>
 		<div>
 			<!-- <img src="/agerrstudio.svg" alt="agerrstudio Logo" class="h-6 mb-2 mt-4" /> -->
 			<div class="w-fit">
@@ -160,7 +160,7 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</a>
 			</div>
-			<h4 class="flex justify-between w-full"><span>Founder & Principal Designer — <a href="https://agerrstudio.com" target="_blank">agerr.studio</a></span> <i>2018 – Present</i></h4>
+			<h4 class="flex justify-between w-full max-[760px]:flex-col max-[760px]:space-y-1.5 max-[760px]:[&>i]:font-[400] max-[760px]:[&>i]:opacity-70"><span>Founder & Principal Designer — <a href="https://agerrstudio.com" target="_blank">agerr.studio</a></span> <i>2018 – Present</i></h4>
 			<h5>(on-demand / project-based)</h5>
 			<ul data-en="
 				<li><b>Founded</b> and <b>lead</b> agerr.studio, a visual branding studio focused on <b>logo design</b>, <b>packaging</b>, <b>merchandise</b>, <b>banners</b>, and <b>website development</b> for SMEs, organizations, and corporate clients.</li>
@@ -202,7 +202,7 @@ import Layout from "../layouts/Layout.astro";
 		
 		<div>
 			<img src="/brainevo.svg" alt="BrainEvo Logo" class="h-7 mb-2 mt-4 dark:opacity-70" />
-			<h4 class="flex justify-between w-full"><span>Part-time Fingerprint Sampler & Analyst — BrainEvo</span> <i>2023 - Present</i></h4>
+			<h4 class="flex justify-between w-full max-[760px]:flex-col max-[760px]:space-y-1.5 max-[760px]:[&>i]:font-[400] max-[760px]:[&>i]:opacity-70"><span>Part-time Fingerprint Sampler & Analyst — BrainEvo</span> <i>2023 - Present</i></h4>
 			<h5>(occasional weekends, peak after school enrollment)</h5>
 			<ul data-en="
 				<li>Captured full 10-print fingerprint sets for clients across all ages (infants to elderly), primarily through <b>institutional drives</b> (e.g., schools), <b>organizational events</b>, and <b>corporate registrations</b>.</li>
@@ -222,21 +222,21 @@ import Layout from "../layouts/Layout.astro";
 			<div class="w-fit">
 				<a href="https://www.panasonic.com/id/" class="w-min dark:opacity-85" tabindex="-1"><img src="/panasonic.svg" alt="Panasonic Logo" class="h-6 mb-2 mt-4" /></a>
 			</div>
-			<h4 class="flex justify-between w-full"><span>Freelance Designer — <a href="/https://www.panasonic.com/id/">Panasonic Gobel</a></span> <i>Jan 2024 | Sahid Sudirman Centre lt. 17</i></h4>
-			<h5>(”Review & Win | Top Spender” & “Free Delivery | Promo Combo”)</h5>
+			<h4 class="flex justify-between w-full max-[760px]:flex-col max-[760px]:space-y-1.5 max-[760px]:[&>i]:font-[400] max-[760px]:[&>i]:opacity-70"><span>4× Freelance Designer — <a href="/https://www.panasonic.com/id/">Panasonic Gobel</a></span> <i>Jan 2024 | Sahid Sudirman Centre lt. 17</i></h4>
+			<h5>(”Review & Win", "Top Spender”, “Free Delivery", & "Promo Combo”)</h5>
 			<ul data-en="
 				<li>Designed and delivered visual assets for Panasonic’s New Year 2024, meeting corporate briefs and deadlines.</li>
 				<li>Collaborated with marketing and brand stakeholders to ensure alignment and timely delivery of materials.</li>
-				<li>Created digital assets for two promotional programs—<b>Free Delivery & Promo Combo</b> and <b>Review & Win (Top Spender)</b>—from concept through final production.</li>
+				<li>Created digital assets for two promotional programs—<b>Free Delivery</b>, <b>Promo Combo</b>, <b>Review & Win</b>, and <b>Top Spender</b>—from concept through final production.</li>
 				<li>Produced e-commerce banners optimized for <b>Tokopedia, Shopee, and Lazada</b> and developed Instagram Story creatives tailored to campaign strategy and brand guidelines.</li>"
 				data-id="
 				<li>Mendesain dan mengirimkan aset visual untuk Panasonic dalam rangka Tahun Baru 2024, memenuhi brief dan tenggat waktu perusahaan.</li>
 				<li>Berkolaborasi dengan pemangku kepentingan pemasaran dan merek untuk memastikan keselarasan dan pengiriman materi tepat waktu.</li>
-				<li>Membuat aset digital untuk dua program promosi—<b>Gratis Pengiriman & Promo Combo</b> dan <b>Review & Menang (Pembelanja Terbanyak)</b>—dari konsep hingga produksi akhir.</li>
+				<li>Membuat aset digital untuk dua program promosi—<b>Free Delivery</b>, <b>Promo Combo</b>, <b>Review & Win</b>, dan <b>Top Spender</b>—dari konsep hingga produksi akhir.</li>
 				<li>Memproduksi banner e-commerce yang dioptimalkan untuk <b>Tokopedia, Shopee, dan Lazada</b> serta mengembangkan materi kreatif Instagram Story yang disesuaikan dengan strategi kampanye dan panduan merek.</li>">
 				<li>Designed and delivered visual assets for Panasonic’s New Year 2024, meeting corporate briefs and deadlines.</li>
 				<li>Collaborated with marketing and brand stakeholders to ensure alignment and timely delivery of materials.</li>
-				<li>Created digital assets for two promotional programs—<b>Free Delivery & Promo Combo</b> and <b>Review & Win (Top Spender)</b>—from concept through final production.</li>
+				<li>Created digital assets for two promotional programs—<b>Free Delivery</b>, <b>Promo Combo</b>, <b>Review & Win</b>, and <b>Top Spender</b>—from concept through final production.</li>
 				<li>Produced e-commerce banners optimized for <b>Tokopedia, Shopee, and Lazada</b> and developed Instagram Story creatives tailored to campaign strategy and brand guidelines.</li>
 			</ul>
 		</div>
@@ -245,12 +245,12 @@ import Layout from "../layouts/Layout.astro";
 	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
 	<section class="title" id="education">
-		<h3>Education</h3>
+		<h3 data-en="Education" data-id="Pendidikan">Education</h3>
 		<div>
 			<!-- <div class="w-fit">
 				<img src="/unsia.png" alt="Unsia Logo" class="h-10 mb-2 mt-4" />
 			</div> -->
-			<h4 class="flex justify-between w-full"
+			<h4 class="flex justify-between w-full max-[760px]:flex-col max-[760px]:space-y.5-1 max-[760px]:[&>i]:font-[400] max-[760px]:[&>iopacity-700]"
 			data-en="<span>Bachelor of Information Systems</span> <i>Universitas Siber Asia (Expected graduation: Q4 2026)</i>"
 			data-id="<span>Sarjana Sistem Informasi</span> <i>Universitas Siber Asia (Perkiraan lulus: Q4 2026)</i>">
 				<span>Bachelor of Information Systems</span> <i>Universitas Siber Asia (Expected graduation: Q4 2026)</i></h4>
@@ -263,7 +263,7 @@ import Layout from "../layouts/Layout.astro";
 			<!-- <div class="w-fit">
 				<img src="/gitaja.png" alt="gitaja Logo" class="h-12 mt-4 -translate-x-1" />
 			</div> -->
-			<h4 class="flex justify-between w-full"
+			<h4 class="flex justify-between w-full max-[760px]:flex-col max-[760px]:space-y.5-1 max-[760px]:[&>i]:font-[400] max-[760px]:[&>iopacity-700]"
 			data-en="<span>Adobe Illustrator & Freelancer Cource</span> <i>Git Kreatif by Git Aja</i>"
 			data-id="<span>Kursus Adobe Illustrator & Freelancer</span> <i>Git Kreatif oleh Git Aja</i>">
 				<span>Adobe Illustrator & Freelancer Cource</span> <i>Git Kreatif by Git Aja</i></h4>
@@ -273,7 +273,7 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 		
 		<div>
-			<h4 class="flex justify-between w-full"
+			<h4 class="flex justify-between w-full max-[760px]:flex-col max-[760px]:space-y.5-1 max-[760px]:[&>i]:font-[400] max-[760px]:[&>iopacity-700]"
 			data-en="<span>Vocational High School — Software Engineering</span> <i>SMK Negeri 1 Cianjur (Graduated 2021)</i>"
 			data-id="<span>SMK — Rekayasa Perangkat Lunak</span> <i>SMK Negeri 1 Cianjur (Lulus 2021)</i>">
 				<span>Vocational High School — Software Engineering</span> <i>SMK Negeri 1 Cianjur (Graduated 2021)</i></h4>
@@ -285,9 +285,9 @@ import Layout from "../layouts/Layout.astro";
 
 	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
-	<div class="w-full gap-8 grid grid-cols-2" id="etc">
+	<div class="w-full min-[760px]:gap-8 grid grid-cols-2 max-[760px]:grid-cols-1" id="etc">
 		<section class="title">
-			<h3>Leadership & Involvement</h3>
+			<h3 data-en="Leadership & Involvement" data-id="Kepemimpinan & Keterlibatan">Leadership & Involvement</h3>
 			<div>
 				<ul>
 					<li><b>agerr.studio — Founder</b></li>
@@ -296,7 +296,8 @@ import Layout from "../layouts/Layout.astro";
 				</ul>
 			</div>
 		</section>
-		
+
+		<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full min-[760px]:hidden"></div>
 
 		<section class="title">
 			<h3>Languages</h3>
@@ -310,24 +311,34 @@ import Layout from "../layouts/Layout.astro";
 	<div class="border-b-1 border-zinc-300 dark:border-zinc-700/80 w-full"></div>
 
 	<section class="title select-none" id="projects">
-		<h3>Projects Highlight</h3>
+		<h3 data-en="Projects Highlight" data-id="Projek Unggulan">Projects Highlight</h3>
 		<div class="grid grid-cols-2 gap-6">
-			<div class="space-y-2">
-				<p><b>KASATARA - Annual Projects</b></p>
-				<div class="aspect-[3/2] rounded-md w-full bg-red-400"></div>
-			</div>
-			<div class="space-y-2">
+			<button id="open-kasatara" class="w-full text-left space-y-2 group cursor-pointer max-[760px]:text-center">
+				<p><b><span class="max-[760px]:hidden">KASATARA - </span>Annual Projects</b></p>
+				<div class="aspect-[5/3] group-hover:scale-102 rounded-md w-full bg-gradient-to-tr from-stone-200 to-zinc-100 overflow-hidden flex justify-center items-center">
+					<img src="kasataralong.png" alt="" class="h-[60%] object-cover">
+				</div>
+			</button>
+			<button id="open-panasonic" class="w-full text-left space-y-2 group cursor-pointer max-[760px]:text-center">
 				<p><b>Panasonic - Jan 2024</b></p>
-				<div class="aspect-[3/2] rounded-md w-full bg-red-400"></div>
-			</div>
-			<div class="space-y-2">
-				<p><b>Marco Travel - Website Development</b></p>
-				<div class="aspect-[3/2] rounded-md w-full bg-red-400"></div>
-			</div>
-			<div class="space-y-2">
-				<p><b>PAYAZ - Design UMKM</b></p>
-				<div class="aspect-[3/2] rounded-md w-full bg-red-400"></div>
-			</div>
+				<div class="aspect-[5/3] group-hover:scale-102 rounded-md w-full bg-gradient-to-tr from-stone-200 to-zinc-100 overflow-hidden flex justify-center items-center relative">
+					<img src="panasonic.svg" alt="" class="w-[65%] object-cover z-10">
+					<div class="bg-white z-5 w-64 h-12 blur-xl absolute">test</div>
+					<img src="panasonic.jpg" alt="" class="h-full w-full object-cover absolute opacity-30">
+				</div>
+			</button>
+			<button onclick="window.open('https://umrohmarco.com/')" class="w-full text-left space-y-2 group cursor-pointer max-[760px]:text-center">
+				<p><b>Marco Travel <span class="max-[760px]:hidden">- Website Development</span></b></p>
+				<div class="aspect-[5/3] group-hover:scale-102 rounded-md w-full overflow-hidden">
+					<img src="marcoweb.png" alt="" class="h-full w-full object-cover">
+				</div>
+			</button>
+			<button id="open-payaz" class="w-full text-left space-y-2 group cursor-pointer max-[760px]:text-center">
+				<p data-en="<b>PAYAZ - UMKM Design</b>" data-id="<b>PAYAZ - Desain UMKM</b>"><b>PAYAZ - Design UMKM</b></p>
+				<div class="aspect-[5/3] group-hover:scale-102 rounded-md w-full overflow-hidden">
+					<img src="payaz.png" alt="" class="h-full w-full object-cover">
+				</div>
+			</button>
 		</div>
 	</section>
 

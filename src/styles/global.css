@@ -50,7 +50,7 @@ h2 {
 }
 
 .title a {
-    @apply text-[14px] text-zinc-800 dark:text-white hover:underline visited:text-sky-600 dark:visited:text-sky-400 outline-none focus:underline focus:decoration-[1.5px] focus-visible:decoration-sky-400
+    @apply text-[14px] text-zinc-800 dark:text-white hover:underline visited:text-sky-600 dark:visited:text-sky-400 outline-none focus:underline focus:decoration-[1.5px] focus-visible:decoration-sky-400 max-[760px]:w-min max-[760px]:whitespace-nowrap
 }
 
 .title span {
