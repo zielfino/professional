@@ -6,7 +6,7 @@ const { icon, name, link } = Astro.props;
     !link 
     ? 
         <div
-        class="flex justify-center items-center transition-colors rounded-full mx-1 py-1.5 px-2 max-[760px]:bg-zinc-300/50 dark:max-[760px]:bg-zinc-700/30"
+        class="flex justify-center items-center transition-colors rounded-full mx-1 py-1.5 px-2 max-[760px]:bg-zinc-100 dark:max-[760px]:bg-zinc-700/30"
         >
             <p>{name}</p>
         </div>
@@ -17,7 +17,7 @@ const { icon, name, link } = Astro.props;
         <button
         type="button"
         onclick={`window.open(${JSON.stringify(link)}, '_blank')`}
-        class="flex justify-center items-center cursor-pointer max-[760px]:bg-zinc-300/50 dark:max-[760px]:bg-zinc-700/30 hover:bg-zinc-300 dark:hover:bg-zinc-700/50 transition-colors rounded-full mx-1 py-1.5 px-2"
+        class="flex justify-center items-center cursor-pointer max-[760px]:bg-zinc-100 dark:max-[760px]:bg-zinc-700/30 hover:bg-zinc-300 dark:hover:bg-zinc-700/50 transition-colors rounded-full mx-1 py-1.5 px-2"
         >
             <Icon name={icon} width="20px" height="20px" class="mr-1" />
             <p>{name}</p>
@@ -26,7 +26,7 @@ const { icon, name, link } = Astro.props;
         <button
         type="button"
         onclick={`window.open(${JSON.stringify(link)}, '_blank')`}
-        class="flex justify-center items-center cursor-pointer max-[760px]:bg-zinc-300/50 dark:max-[760px]:bg-zinc-700/30 hover:bg-zinc-300 dark:hover:bg-zinc-700/50 transition-colors rounded-full mx-1 py-1.5 px-2.5"
+        class="flex justify-center items-center cursor-pointer max-[760px]:bg-zinc-100 dark:max-[760px]:bg-zinc-700/30 hover:bg-zinc-300 dark:hover:bg-zinc-700/50 transition-colors rounded-full mx-1 py-1.5 px-2.5"
         >
             <p>{name}</p>
         </button>

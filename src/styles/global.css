@@ -22,14 +22,29 @@
     --breakpoint-xl: 1300px;  
 }
 
+:root{
+    --scrollbar-track: theme('colors.white');
+    --scrollbar-thumb: theme('colors.zinc.500');
+}
+.dark {
+    --scrollbar-track: theme('colors.zinc.900');
+    --scrollbar-thumb: theme('colors.zinc.500');
+}
+
+@layer utilities {
+    ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+    ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb);}
+
+    /* Firefox */
+    html {
+        scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    }
+}
+
 img, input, button {
     -webkit-user-drag: none;
     user-select: none;
     pointer-events: auto;
-}
-
-* {
-    @apply transition-colors
 }
 
 h1 {

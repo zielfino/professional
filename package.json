@@ -17,9 +17,11 @@
     "@iconify-json/devicon": "^1.2.43",
     "@iconify-json/hugeicons": "^1.2.14",
     "@iconify-json/mingcute": "^1.2.5",
+    "@iconify-json/radix-icons": "^1.2.5",
     "@iconify-json/simple-icons": "^1.2.50",
     "@iconify-json/skill-icons": "^1.2.3",
     "@iconify-json/vscode-icons": "^1.2.30",
     "astro-icon": "^1.1.5"
-  }
+  },
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
